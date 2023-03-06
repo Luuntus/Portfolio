@@ -1,0 +1,215 @@
+@font-face {
+  font-family: regular;
+  src: url("./Fira_Sans/FiraSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: big;
+  src: url("./Fira_Sans/FiraSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: semibold;
+  src: url("./Fira_Sans/FiraSans-SemiBold.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar{
+  width: 100vw;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar>ul{
+  display: inline-block;
+  text-decoration: none;
+  list-style: none;
+}
+
+.NavLink{
+  display: inline-block;
+}
+
+.navList{
+  display: inline-block;
+  color: black;
+  margin-left: 8px;
+  font-size: 18px;
+  position: relative;
+  top: -2.5px;
+}
+
+.bigNumber{
+  color: #646AFF!important;
+  font-size: 28px;
+  font-family: "roboto";
+  margin-left: 25px;
+  display: inline-block;
+}
+
+.bodyContent{
+  margin-top: 60px;
+}
+
+.socials{
+  margin-left: 60px;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+}
+
+.socialIcon{
+  width: 36px;
+  display:block;
+}
+
+.topMarginSocialIcon{
+  margin-top: 30px;
+}
+
+.leftCenterText{
+  margin-left: 180px;
+  transform: translate(0, 40%);
+  position: relative;
+}
+
+.title{
+  font-family: big;
+  font-size: 52pt;
+}
+
+.blue{
+  color: #646AFF;
+}
+
+.noTopMargin{
+  margin-top: 0;
+}
+
+.noBottomMargin{
+  margin-bottom: 0;
+}
+
+.bigParagraph{
+  font-family: regular;
+  font-size: 18pt;
+  width: 630px;
+}
+
+input{
+  border-radius: 50px;
+  border: none;
+  background-color: #646AFF;
+  color: white;
+  font-size: 16pt;
+  padding: 12.5px 25px;
+  font-family: regular;
+  cursor: pointer;
+}
+
+.rightLine{
+  display: inline-block;
+  width: 25%;
+  margin-left: 20px;
+  border: 0.8px solid #646AFF;
+}
+
+.leftLine{
+  display: inline-block;
+  width: 25%;
+  margin-right: 20px;
+  border: 0.8px solid #646AFF;
+}
+
+.or{
+  display: inline-block;
+  color: #646AFF;
+  font-family: "roboto";
+  font-weight: bold;
+  font-size: 24pt;
+}
+
+.underIntro{
+  position: relative;
+  width: 400px;
+  left: 180px; 
+  margin-top: 160px;
+}
+
+.scrollPrompt{
+  position: absolute;
+  width: 50px;
+  top: 93%;
+  left: 180px;
+}
+
+.vertLine{
+  border: 0.8px solid #646AFF;
+  width: 0;
+  height: 50px;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.scroll{
+  display: inline-block;
+  margin-left: 20px;
+  color: #646AFF;
+  position: absolute;
+  top: 0;
+}
+
+.me{
+  border-radius: 100%;
+  width: 100%;
+}
+
+.rightPhoto{
+  position: relative;;
+  left: 75%;
+  width: 25%;
+  transform: translate(-35%, -465px);
+}
+
+.scrollPrompt2{
+  position: absolute;
+  width: 200px;
+  top: 99.5%;
+  left: 180px;
+}
+
+.project{
+  width: 100vw;
+  height: 25vw;
+  background-color:rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.coverImage{
+  height: 100%;
+  width: 100%;
+  background-image: url("./photos/personalProject.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate(0, -253px);
+  position: relative;
+}
