@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "./components/navbar.jsx";
 import github from "./photos/github-10-256.png";
 import linkedIn from "./photos/linkedin-3-256.png";
@@ -6,8 +6,15 @@ import {Link} from "react-router-dom";
 import me from "./photos/Niels portret.jpg";
 import me2 from "./photos/niels (2).jpg";
 import Footer from "./components/footer.jsx";
+import { HashLink } from "react-router-hash-link";
+import {animateScroll as scroll} from "react-scroll";
 
 function Home() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <>
             <Navbar />
@@ -24,7 +31,9 @@ function Home() {
                     <h1 class="title noBottomMargin">Hey, I'm Niels</h1>
                     <h1 class="blue title noTopMargin noBottomMargin">Frontend Developer</h1>
                     <p class="bigParagraph">I have been into frontend developing since 2019 and been improving ever since! Currently making the life of horticulturists easier at Yookr B.V. </p>
-                    <input type="button" value="Look at my work!" action="#projects"/>
+                    <HashLink to="#projects" smooth={true} offset={-70}>
+                    <input type="button" value="Look at my work!"/>
+                    </HashLink>
                 </div>
                 <div class="underIntro">
                     <hr class="leftLine"/> <h2 class="or">OR</h2> <hr class="rightLine"/>

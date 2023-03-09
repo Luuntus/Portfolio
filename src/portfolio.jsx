@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "./components/navbar";
 import { Link } from "react-router-dom";
 import Footer from "./components/footer";
@@ -7,6 +7,11 @@ import DT from "./documents/Design Trends Research.pdf";
 import AF from "./documents/Animations and frameworks.pdf";
 
 function Portfolio() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <React.StrictMode>
         <Navbar />
