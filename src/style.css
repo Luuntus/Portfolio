@@ -400,3 +400,18 @@ em{
 .uizard{
   background-image: url('./photos/uizard.png');
 }
+
+.inspiration{
+  background-image: url("./photos/cult (2).png");
+  background-position: 0px -20px;
+}
+
+.design{
+  background-image: url("./photos/uizard2.png");
+  background-position: 0px -5px;
+}
+
+.testing{
+  background-image: url("./photos/testing.png");
+  background-position: 0px -100px;
+}
