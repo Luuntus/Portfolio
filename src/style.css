@@ -415,3 +415,7 @@ em{
   background-image: url("./photos/testing.png");
   background-position: 0px -100px;
 }
+
+a{
+  text-decoration: none;
+}

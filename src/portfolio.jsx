@@ -2,6 +2,9 @@ import React from "react";
 import Navbar from "./components/navbar";
 import { Link } from "react-router-dom";
 import Footer from "./components/footer";
+import TA from "./documents/Target Audience Research.pdf";
+import DT from "./documents/Design Trends Research.pdf";
+import AF from "./documents/Animations and frameworks.pdf";
 
 function Portfolio() {
     return (
@@ -40,7 +43,9 @@ function Portfolio() {
                     in mere seconds. Lastly, using frameworks shows that you have knowledge of how frameworks work. This is something that is always a plus if you want 
                     to be a good frontend developer.</p>
                     <p class="researchText">View the whole research document with the button below.</p>
-                    <input type="button" value="Research Document" class="viewBtn"/>
+                    <a href={TA}>
+                        <input type="button" value="Research Document" class="viewBtn"/>
+                    </a>
                     <h2 class="researchSubtitle">Design Trends Research</h2>
                     <em class="researchQuestion">What are the current design trends?/How do I apply these trends to my portfolio?</em>
                     <br />
@@ -55,7 +60,9 @@ function Portfolio() {
                     I could verify my design and make sure that my portfolio is actually a good media product.</p>
                     <div class="researchImg uizard"></div>
                     <p class="researchText">View the whole research document with the button below.</p>
+                    <a href={DT}>
                     <input type="button" value="Research Document" class="viewBtn"/>
+                    </a>
                     <h2 class="researchSubtitle">Animations and Frameworks</h2>
                     <em class="researchQuestion">How do I use animations in CSS/JavaScript?/What frameworks will help me with animations and responsiveness?</em>
                     <br />
@@ -68,7 +75,9 @@ function Portfolio() {
                     Even though JavaScript libraries make making animations very easy, frameworks make animations easier where there is not yet a library available. 
                     </p>
                     <p class="researchText">View the whole research document with the button below.</p>
+                    <a href={AF}>
                     <input type="button" value="Research Document" class="viewBtn"/>
+                    </a>
                     <h2 class="researchSubtitle">Conclusion</h2>
                     <em class="researchQuestion">How do I design and realize a professional personal showcase portfolio that shows that I am a professional media designer?</em>
                     <p class="researchText">My main question can be answered by looking at all the conclusions from my sub questions. By looking into different portfolios 
