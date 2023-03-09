@@ -55,7 +55,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div class="coverImage personalProject">
+                <div class="coverImage coverImage2 personalProject">
                     <div class="project">
                         <div class="projectDesc">
                             <h2 class="projectTitle">Youth Care</h2>

@@ -419,3 +419,7 @@ em{
 a{
   text-decoration: none;
 }
+
+.coverImage2{
+  background-image: url("./photos/dynamo.png");
+}
