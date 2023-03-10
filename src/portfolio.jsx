@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import TA from "./documents/Target Audience Research.pdf";
 import DT from "./documents/Design Trends Research.pdf";
 import AF from "./documents/Animations and frameworks.pdf";
+import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
 
 function Portfolio() {
 
@@ -32,7 +33,11 @@ function Portfolio() {
                             <div class="tag leftTag">Research</div>
                             <div class="tag">Design</div>
                             <div class="tag">Programming</div>
-                            <input type="button" value="Reading Guide" class="viewBtn" />
+                            <br />
+                            <input type="button" value="Reading Guide" class="viewBtn" style={{display: "inline-block"}}/>
+                            <a href={PP} style={{display: "inline-block", marginLeft: "20px"}}>
+                            <input type="button" value="Project Plan" class="viewBtn" />
+                            </a>
                         </div>
                     </div>
                 </div>
