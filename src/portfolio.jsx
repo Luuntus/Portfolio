@@ -6,6 +6,7 @@ import TA from "./documents/Target Audience Research.pdf";
 import DT from "./documents/Design Trends Research.pdf";
 import AF from "./documents/Animations and frameworks.pdf";
 import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
+import RG from "./documents/Reading Guide Personal Project.pdf";
 
 function Portfolio() {
 
@@ -34,7 +35,9 @@ function Portfolio() {
                             <div class="tag">Design</div>
                             <div class="tag">Programming</div>
                             <br />
+                            <a href={RG}>
                             <input type="button" value="Reading Guide" class="viewBtn" style={{display: "inline-block"}}/>
+                            </a>
                             <a href={PP} style={{display: "inline-block", marginLeft: "20px"}}>
                             <input type="button" value="Project Plan" class="viewBtn" />
                             </a>
