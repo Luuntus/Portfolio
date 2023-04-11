@@ -7,9 +7,17 @@ import me from "./photos/Niels portret.jpg";
 import me2 from "./photos/niels (2).jpg";
 import Footer from "./components/footer.jsx";
 import { HashLink } from "react-router-hash-link";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import Project from "./components/project.jsx";
+import personalProject from "./photos/personalProject.png";
+import groupProject from "./photos/dynamo.png";
 import {animateScroll as scroll} from "react-scroll";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Home() {
+
+    AOS.init();
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -53,50 +61,14 @@ function Home() {
                     <div class="vertLine"></div>
                     <p class="scroll">...and see the magic</p>
                 </div>
-                <div class="coverImage personalProject" id="projects">
-                    <div class="project">
-                        <div class="projectDesc">
-                            <h2 class="projectTitle">Personal Portfolio</h2>
-                            <em class="subtitle">Personal Project</em>
-                            <br />
-                            <div class="tag leftTag">Research</div>
-                            <div class="tag">Design</div>
-                            <div class="tag">Programming</div>
-                            <Link to="/portfolio" class="btnLink">
-                                <input type="button" value="View ->" class="viewBtn" />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div class="coverImage coverImage2 personalProject">
-                    <div class="project">
-                        <div class="projectDesc">
-                            <h2 class="projectTitle">Youth Care</h2>
-                            <em class="subtitle">Group Project</em>
-                            <br />
-                            <div class="tag leftTag">Research</div>
-                            <div class="tag">Design</div>
-                            <div class="tag">Programming</div>
-                            <input type="button" value="View ->" class="viewBtn"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="coverImage personalProject">
-                    <div class="project">
-                        <div class="projectDesc">
-                            <h2 class="projectTitle">International Week</h2>
-                            <em class="subtitle">International Project</em>
-                            <br />
-                            <div class="tag leftTag">Research</div>
-                            <div class="tag">Design</div>
-                            <div class="tag">Programming</div>
-                            <input type="button" value="View ->" class="viewBtn"/>
-                        </div>
-                    </div>
-                </div>
+                <Project image={personalProject} name="Personal Portfolio" project="Personal Project" research="Research" design="Design" programming="Programming"/>
+                <Project image={groupProject} name="Online Youth Work" project="Group Project" research="Research" design="Design" programming="Programming"/>
+                <Project image={personalProject} name="International Week" project="International Project" research="Research" design="Design" programming="Programming"/>
+                <div data-aos="fade-up">
                 <div class="aboutMe">
                     <h1 class="aboutMeTitle">About me</h1>
                     <div class="bigCard">
+                    <div data-aos="fade-up">
                         <h2 class="compentences">Research - Design - Development - Teaching; The things that I do.</h2>
                         <p class="aboutMeText">I am <b>Niels Vissers.</b>As a <b>media designer</b>, I <b>imagine, design and create </b>what you as a customer want. I work best in <b>small teams </b>
                         and I have a drive to do my work right. My main skills include:</p>
@@ -115,9 +87,11 @@ function Home() {
                         gives <b>no miscommunication.</b> If you want to know more about me, you can refer to me <b>resume </b>below.</p>
                         <input type="button" value="Resume" class="viewBtn aboutMeBtn"/>
                     </div>
+                    </div>
                     <div class="aboutMePicture">
                         <img src={me2} alt="me, again :)" class="me2"/>
                     </div>
+                </div>
                 </div>
                 <div class="footer">
                     <Footer />

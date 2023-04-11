@@ -7,16 +7,14 @@ import DT from "./documents/Design Trends Research.pdf";
 import AF from "./documents/Animations and frameworks.pdf";
 import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
 import RG from "./documents/Reading Guide Personal Project.pdf";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function Portfolio() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
-
-      window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-      }
 
     return (
         <React.StrictMode>
@@ -45,6 +43,7 @@ function Portfolio() {
                     </div>
                 </div>
                 <div class="explanation">
+                <div data-aos="fade-up">
                     <h1 class="researchTitle">Research</h1>
                     <h2 class="researchSubtitle" id="TAR">User Research</h2>
                     <em class="researchQuestion">How can I use my portfolio to impress small companies for the function of frontend developer?</em>
@@ -63,6 +62,9 @@ function Portfolio() {
                     <a href={TA}>
                         <input type="button" value="Research Document" class="viewBtn"/>
                     </a>
+                    </div>
+                    <br /><br />
+                    <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Design Trends Research</h2>
                     <em class="researchQuestion">What are the current design trends?/How do I apply these trends to my portfolio?</em>
                     <br />
@@ -75,11 +77,16 @@ function Portfolio() {
                     Then I also used AI's like Tabnine and Uizard to make the process of both coding and designing easier. I would definitely opt to use 
                     these AI's again. I have also used the knowledge and vision of my peers to check if I applied these trends correctly. By doing this, 
                     I could verify my design and make sure that my portfolio is actually a good media product.</p>
+                    </div>
+                    <div data-aos="fade-up">
                     <div class="researchImg uizard"></div>
                     <p class="researchText">View the whole research document with the button below.</p>
                     <a href={DT}>
                     <input type="button" value="Research Document" class="viewBtn"/>
                     </a>
+                    </div>
+                    <br /><br />
+                    <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Animations and Frameworks</h2>
                     <em class="researchQuestion">How do I use animations in CSS/JavaScript?/What frameworks will help me with animations and responsiveness?</em>
                     <br />
@@ -91,10 +98,15 @@ function Portfolio() {
                     of good libraries for easy animations in CSS and JavaScript. These are sometimes even easier to use than the animation libraries from frameworks. 
                     Even though JavaScript libraries make making animations very easy, frameworks make animations easier where there is not yet a library available. 
                     </p>
+                    </div>
+                    <div data-aos="fade-up">
                     <p class="researchText">View the whole research document with the button below.</p>
                     <a href={AF}>
                     <input type="button" value="Research Document" class="viewBtn"/>
                     </a>
+                    </div>
+                    <br /><br />
+                    <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Conclusion</h2>
                     <em class="researchQuestion">How do I design and realize a professional personal showcase portfolio that shows that I am a professional media designer?</em>
                     <p class="researchText">My main question can be answered by looking at all the conclusions from my sub questions. By looking into different portfolios 
@@ -102,26 +114,38 @@ function Portfolio() {
                     (experts) and peers. Improve until you are satisfied and then fill in the content, colors and maybe even images. Test this again with the same 
                     groups. Preferably, you want to use a popular framework when starting development and lastly deploy your portfolio on a trustworthy hosting 
                     service.</p>
+                    </div>
+                    <div data-aos="fade-up">
                     <h1 class="researchTitle">Design</h1>
                     <h2 class="researchSubtitle">Inspiration</h2>
                     <p class="researchText">As mentioned in my research, I have looked at multiple different portfolios to make a design worthy of 
                     a media designer. I took this inspiration mostly via Behance or via sites with a couple of examples. I took all kinds of elements and 
                     colors I liked from all kinds of different portfolios and gave my own twist to it. With all these things I started to make a design. 
                     The inspiration shown in the picture is from <Link to="https://www.cult.nl">Cult.nl</Link>, a media company in Horst, who were in the same building as me during my internship.</p>
+                    </div>
+                    <div data-aos="fade-up">
                     <div class="researchImg inspiration"></div>
+                    </div>
+                    <br /><br />
+                    <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Design</h2>
                     <p class="researchText">For my design I used <Link to="https://www.uizard.io">Uizard</Link>. This tool helped me create a design 
                     by using AI to give ideas and to tranform sketches and images into full-fledged wireframes. This spared me a great deal of time by instantly 
                     turning my main inspiration into a wireframe. The only lack that this program has, is that it lacks in feature, if you do not buy the full version. Also, you cannot write bold 
                     text in a text element that has regular text. You have to make two elements for that. But other than that, I would use this program 
                     again. Because of the aforementioned reasons, I like this program more than Adobe XD for example.</p>
+                    </div>
+                    <div data-aos="fade-up">
                     <div class="researchImg design"></div>
+                    </div>
+                    <br /><br />
                     <h2 class="researchSubtitle">Testing</h2>
                     <p class="researchText">I did not do a lot of testing, so this is something I should definitely look out for in the future, 
                     but the testing I did was very positive. With multiple peer reviews and expert reviews, with for example Paul Reekers and 
                     John van Helden, I recieved very positive feedback. With a couple of small changes, in both design and UX, I have improved upon 
                     my original design. These small changes include the deletion of some obsolete pictures and the addition of my research questions and methods in 
                     this documentation.</p>
+                    <br /><br />
                     <h1 class="researchTitle">Programming</h1>
                     <h2 class="researchSubtitle">Programming with React and Tabnine</h2>
                     <p class="researchText">Programming is always the part I like the most. Hence why I want to become a frontend developer 
@@ -129,6 +153,7 @@ function Portfolio() {
                     before, but Tabnine was my first time. And I was really happy with Tabnine. The way it auto-fills some programming lines correctly 
                     makes your experience with programming nicer. I would use Tabnine again in future projects and I am even deliberating with myself if 
                     I should buy the premium version of Tabnine.</p>
+                    <br /><br />
                     <h2 class="researchSubtitle">Hosting</h2>
                     <p class="researchText">This was my first time hosting on something else than Hera. So I asked around and someone refered me to 
                     Netlify. Before I got a chance to use it, someone else refered me to Vercel. So I had to make a choice which one to use. However, this 
