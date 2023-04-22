@@ -7,7 +7,7 @@ import DT from "./documents/Design Trends Research.pdf";
 import AF from "./documents/Animations and frameworks.pdf";
 import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
 import RG from "./documents/Reading Guide Personal Project.pdf";
-import AOS from 'aos';
+
 import 'aos/dist/aos.css'; 
 
 function Portfolio() {

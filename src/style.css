@@ -203,7 +203,7 @@ input{
 
 .project{
   width: 100vw;
-  height: 25vw;
+  height: 400px;
   background-color:rgba(0, 0, 0, 0.5);
   position: relative;
 }
@@ -303,7 +303,7 @@ em{
 }
 
 .aboutMePicture{
-  width: 350px;
+  width: 25vw;
   border-radius: 10px;
   position: absolute;
   right: 60px;
@@ -441,4 +441,114 @@ a{
   display: block; 
   height: 180px; 
   margin: -180px 0 0 0;
+}
+
+@media only screen and (max-width: 1500px){
+  .aboutMeQuote{
+    font-size: 36pt;
+  }
+
+  .aboutMeText{
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .aboutMeQuote{
+    font-size: 24pt;
+  }
+
+  .aboutMePicture{
+    width: 300px;
+  }
+
+  .aboutMeText{
+    max-width: 7   0%;
+  }
+
+  .projectTitle{
+    font-size: 28pt;
+  }
+
+  .project{
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 1100px){
+  .aboutMePicture{
+    width: 250px;
+    top: 70%;
+    right: 20px;
+  }
+
+  .aboutMeText{
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  .aboutMePicture{
+    display: none;
+  }
+
+  .aboutMeText{
+    max-width: 90%;
+  }
+
+  .projectDesc{
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .projectDesc{
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .bigCard{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .compentences{
+    text-align: center;
+    width: 100%;
+  }
+
+  .aboutMe{
+    margin-left: 20px;
+  }
+
+  .aboutMeText{
+    text-align: center;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .skills{
+    width: 100%;
+  }
+
+  .aboutMeQuote{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .aboutMeBtn{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1500px){
+  .aboutMePicture{
+    width: 350px;
+  }
 }
