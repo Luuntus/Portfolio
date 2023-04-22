@@ -6,14 +6,12 @@ import {Link} from "react-router-dom";
 import me from "./photos/Niels portret.jpg";
 import me2 from "./photos/niels (2).jpg";
 import Footer from "./components/footer.jsx";
-import { HashLink } from "react-router-hash-link";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Project from "./components/project.jsx";
 import personalProject from "./photos/personalProject.png";
 import groupProject from "./photos/dynamo.png";
-import {animateScroll as scroll} from "react-scroll";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import Resume from "./documents/CV Niels Vissers.pdf";
 
 function Home() {
 
@@ -43,9 +41,9 @@ function Home() {
                     <h1 class="title noBottomMargin">Hey, I'm Niels</h1>
                     <h1 class="blue title noTopMargin noBottomMargin">Frontend Developer</h1>
                     <p class="bigParagraph">I have been into frontend developing since 2019 and been improving ever since! Currently making the life of horticulturists easier at Yookr B.V. </p>
-                    <HashLink to="#projects" smooth={true} offset={-70}>
-                    <input type="button" value="Look at my work!"/>
-                    </HashLink>
+                    <a href="#projects" class="anchor">
+                        <input type="button" value="Look at my work!"/>
+                    </a>
                 </div>
                 <div class="underIntro">
                     <hr class="leftLine"/> <h2 class="or">OR</h2> <hr class="rightLine"/>
@@ -61,12 +59,14 @@ function Home() {
                     <div class="vertLine"></div>
                     <p class="scroll">...and see the magic</p>
                 </div>
-                <Project image={personalProject} name="Personal Portfolio" project="Personal Project" research="Research" design="Design" programming="Programming"/>
+                <section id="projects">
+                <Project image={personalProject} name="Personal Portfolio" project="Personal Project" research="Research" design="Design" programming="Programming" class="projectComp"/>
                 <Project image={groupProject} name="Online Youth Work" project="Group Project" research="Research" design="Design" programming="Programming"/>
                 <Project image={personalProject} name="International Week" project="International Project" research="Research" design="Design" programming="Programming"/>
+                </section>
                 <div data-aos="fade-up">
                 <div class="aboutMe">
-                    <h1 class="aboutMeTitle">About me</h1>
+                    <h1 class="aboutMeTitle" id="aboutMe">About me</h1>
                     <div class="bigCard">
                     <div data-aos="fade-up">
                         <h2 class="compentences">Research - Design - Development - Teaching; The things that I do.</h2>
@@ -85,7 +85,9 @@ function Home() {
                         <em class="aboutMeQuote">"Trial and Error, until you succeed"</em>
                         <p class="aboutMeText"><b>But most importantly,</b> I am a <b>clear communicator.</b> I want to make sure that <b>each and every way of communication </b> 
                         gives <b>no miscommunication.</b> If you want to know more about me, you can refer to me <b>resume </b>below.</p>
+                        <a href={Resume}>
                         <input type="button" value="Resume" class="viewBtn aboutMeBtn"/>
+                        </a>
                     </div>
                     </div>
                     <div class="aboutMePicture">
@@ -93,7 +95,7 @@ function Home() {
                     </div>
                 </div>
                 </div>
-                <div class="footer">
+                <div class="footer" id="contact">
                     <Footer />
                 </div>
                 

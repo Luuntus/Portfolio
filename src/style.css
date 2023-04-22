@@ -13,6 +13,10 @@
   src: url("./Fira_Sans/FiraSans-SemiBold.ttf");
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "roboto";
@@ -260,6 +264,7 @@ em{
   position: relative;
   margin-left: 60px;
   margin-top: -16%;
+  transition: 1s;
 }
 
 .aboutMeTitle{
@@ -422,4 +427,18 @@ a{
 
 .coverImage2{
   background-image: url("./photos/dynamo.png");
+}
+
+#projects:target::before{
+  content: ''; 
+  display: block; 
+  height: 310px; 
+  margin: -310px 0 0 0;
+}
+
+#aboutMe:target::before{
+  content: ''; 
+  display: block; 
+  height: 180px; 
+  margin: -180px 0 0 0;
 }
