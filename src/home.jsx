@@ -60,9 +60,9 @@ function Home() {
                     <p class="scroll">...and see the magic</p>
                 </div>
                 <section id="projects">
-                <Project image={personalProject} name="Personal Portfolio" project="Personal Project" research="Research" design="Design" programming="Programming" class="projectComp"/>
-                <Project image={groupProject} name="Online Youth Work" project="Group Project" research="Research" design="Design" programming="Programming"/>
-                <Project image={personalProject} name="International Week" project="International Project" research="Research" design="Design" programming="Programming"/>
+                <Project image={personalProject} link="/portfolio" name="Personal Portfolio" project="Personal Project" research="Research" design="Design" programming="Programming" class="projectComp"/>
+                <Project image={groupProject} link="/youthwork" name="Online Youth Work" project="Group Project" research="Research" design="Design" programming="Programming"/>
+                <Project image={personalProject} link="/designcharette" name="International Week" project="International Project" research="Research" design="Design" programming="Programming"/>
                 </section>
                 <div data-aos="fade-up">
                 <div class="aboutMe">

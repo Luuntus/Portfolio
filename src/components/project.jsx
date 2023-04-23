@@ -9,6 +9,7 @@ function Project(props) {
     const design = props.design;
     const programming = props.programming;
     const image = props.image;
+    const link = props.link;
 
     return(
         <div class="coverImage personalProject" style={{backgroundImage: `url(${image})`}}>
@@ -21,7 +22,7 @@ function Project(props) {
                             {research == null ? null : <div class="tag leftTag">{research}</div>}
                             {design == null ? null : <div class="tag">{design}</div>}
                             {programming == null ? null : <div class="tag">{programming}</div>}
-                            <Link to="/portfolio" class="btnLink">
+                            <Link to={link} class="btnLink">
                                 <input type="button" value="View ->" class="viewBtn" />
                             </Link>
                         </div>

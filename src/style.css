@@ -218,6 +218,10 @@ input{
   position: relative;
 }
 
+.groupProject{
+  background-image: url("./photos/dynamo.png");
+}
+
 .projectDesc{
   position: absolute;
   left: 60%;

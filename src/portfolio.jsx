@@ -7,10 +7,13 @@ import DT from "./documents/Design Trends Research.pdf";
 import AF from "./documents/Animations and frameworks.pdf";
 import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
 import RG from "./documents/Reading Guide Personal Project.pdf";
+import AOS from 'aos';
 
 import 'aos/dist/aos.css'; 
 
 function Portfolio() {
+
+    AOS.init();
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -65,7 +68,7 @@ function Portfolio() {
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle">Design Trends Research</h2>
+                    <h2 class="researchSubtitle" id="DT">Design Trends Research</h2>
                     <em class="researchQuestion">What are the current design trends?/How do I apply these trends to my portfolio?</em>
                     <br />
                     <div class="tag researchTag leftTag">Benchmark Creation</div>
