@@ -107,6 +107,25 @@ function YouthWork() {
                     </a>
                     </div>
                     <br /><br />
+                    <div data-aos="fade-up">
+                    <h2 class="researchSubtitle" id="Interviews">Interviews and Meetings</h2>
+                    <em class="researchQuestion">Who are the social workers and what are their main tasks in their job?/How can we educate social workers on the use of online media?</em>
+                    <br />
+                    <div class="tag researchTag leftTag">Expert Interview</div>
+                    <div class="tag researchTag">Co-Creation</div>
+                    <div class="tag researchTag">Co-Reflection</div>
+                    <p class="researchText">During the research phase, I conducted two interviews together with my project group. One with Dirk-Jan van Soelen (innovations manager) at 
+                    Dynamo and one with Matheus Sales de Moura (Team leader) at Pitstop. For the interview at Pitstop, I contacted Matheus via a telephone call and eventually via WhatsApp, after we got his contact information from Fenna Dam (research at Garage2020 
+                    and our product owner). We had prepared questions in advance as a group effort, but I 
+                    still came up with a couple of questions during the interviews themselves. For example at Pitstop, I saw a big poster of the 'Touch of God' painting 
+                    by Michaelangelo, so I asked how religion was handeled at Pitstop, which gave some more information about the working of Pitstop. These interviews really 
+                    gave me an idea of the current state of youth work, but also what the future should look like, in the eyes of Dirk-Jan and Matheus.</p>
+                    <p class="researchText">Once every two weeks we had a meeting with Fenna to discuss the progress of the project. After the first four weeks, which were planned out for research, 
+                    I was one of the three people of our group to present the research to Fenna. It was important to me that Fenna, as product owner, was regularly informed about 
+                    the project, to make sure that Fenna and us were on the same line. This made sure that no double work was done and that the direction the project was going in was regularly tested.</p>
+                    
+                    </div>
+                    <br /><br />
                 </div>
                 </div>
                 </React.StrictMode>
