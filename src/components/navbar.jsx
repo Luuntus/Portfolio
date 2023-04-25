@@ -24,7 +24,7 @@ function Navbar() {
     return(
     <div class="navbar">
         <ul>
-            <Link to="#top" class="anchor" scroll={el => scrollWithOffset(el)}>
+            <Link to="/#top" class="anchor" scroll={el => scrollWithOffset(el)}>
                 <li class="bigNumber">01.</li>
                 <li class="navList"> &lt;Home&gt;</li>
             </Link>
