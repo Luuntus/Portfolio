@@ -295,6 +295,12 @@ em{
   font-size: 14pt;
 }
 
+.skills{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .emphasis{
   font-size: 14pt;
   color: black;
@@ -445,6 +451,36 @@ a{
   display: block; 
   height: 180px; 
   margin: -180px 0 0 0;
+}
+
+.internationalProject{
+  background-image: url("./photos/cruyff.jpg");
+}
+
+.skill{
+  width: 14.5vw;
+  height: 20vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.skillOverlay{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.skillText{
+  font-size: 20px;
+  font-family: semibold;
+  color: white;
 }
 
 @media only screen and (max-width: 1500px){

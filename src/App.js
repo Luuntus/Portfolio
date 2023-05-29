@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Portfolio from './portfolio.jsx';
 import YouthWork from './youthWork.jsx';
+import InternationalWeek from './internationalWeek.jsx';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/youthwork" element={<YouthWork />} />
+        <Route path="/internationalWeek" element={<InternationalWeek/>}/>
       </Routes>
     </BrowserRouter>
   );

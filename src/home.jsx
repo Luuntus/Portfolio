@@ -11,7 +11,13 @@ import 'aos/dist/aos.css';
 import Project from "./components/project.jsx";
 import personalProject from "./photos/personalProject.png";
 import groupProject from "./photos/dynamo.png";
+import internationalWeek from "./photos/cruyff.jpg";
 import Resume from "./documents/CV Niels Vissers.pdf";
+import Skill from "./components/skill.jsx";
+import adobeXD from "./photos/adobeXD.png";
+import design from "./photos/design.png";
+import conceptThinking from "./photos/conceptThinking.png";
+import me3 from "./photos/me.jpg";
 
 function Home() {
 
@@ -68,7 +74,7 @@ function Home() {
                 <section id="projects">
                 <Project image={personalProject} link="/portfolio" name="Personal Portfolio" project="Personal Project" research="Research" design="Design" programming="Programming" class="projectComp"/>
                 <Project image={groupProject} link="/youthwork" name="Online Youth Work" project="Group Project" research="Research" design="Design" programming="Programming"/>
-                <Project image={personalProject} link="/designcharette" name="International Week" project="International Project" research="Research" design="Design" programming="Programming"/>
+                <Project image={internationalWeek} link="/internationalWeek" name="Cruyff Foundation" project="International Project" research="Research" design="Design"/>
                 </section>
                 <div data-aos="fade-up">
                 <div class="aboutMe">
@@ -76,15 +82,15 @@ function Home() {
                     <div class="bigCard">
                     <div data-aos="fade-up">
                         <h2 class="compentences">Research - Design - Development - Teaching; The things that I do.</h2>
-                        <p class="aboutMeText">I am <b>Niels Vissers.</b>As a <b>media designer</b>, I <b>imagine, design and create </b>what you as a customer want. I work best in <b>small teams </b>
+                        <p class="aboutMeText">I am <b>Niels Vissers</b>. As a <b>media designer</b>, I <b>imagine, design and create </b>what you as a customer want. I work best in <b>small teams </b>
                         and I have a drive to do my work right. My main skills include:</p>
-                        <ul class="skills">
-                            <li><b>Adobe XD</b></li>
-                            <li><b>Concept Thinking</b></li>
-                            <li><b>Communication</b></li>
-                            <li><b>Design</b></li>
-                            <li><b>Frontend Programming (HTML, CSS, JavaScript)</b></li>
-                        </ul>
+                        <div class="skills">
+                            <Skill img={adobeXD} title="Adobe XD"/>
+                            <Skill img={conceptThinking} title="Concept Thinking"/>
+                            <Skill img={me3} title="Communication"/>
+                            <Skill img={design} title="Design"/>
+                            <Skill img={personalProject} title="HTML/CSS/JS"/>
+                        </div>
                         <p class="aboutMeText"><b>Enthousiasm</b> is what describes me best. I am <b>proud</b> of my work. Of <em class="emphasis">our</em> work. 
                         We will make great things, <b>together!</b> And this enthousiasm makes for a <b>pleasant working experience and a great final product.</b> 
                         I will <b>iterate and improve</b> to deliver you with a product <b>we can all be proud of.</b></p>
