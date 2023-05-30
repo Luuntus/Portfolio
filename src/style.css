@@ -403,6 +403,11 @@ em{
   padding: 5px 20px;
   color: black;
   margin-left: 20px;
+  transition: 0.5s;
+}
+
+.researchTag:hover{
+  transform: scale(1.1);
 }
 
 .researchImg{

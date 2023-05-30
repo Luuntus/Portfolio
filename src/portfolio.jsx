@@ -8,6 +8,7 @@ import AF from "./documents/Animations and frameworks.pdf";
 import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
 import RG from "./documents/Reading Guide Personal Project.pdf";
 import AOS from 'aos';
+import { HashLink } from "react-router-hash-link";
 
 import 'aos/dist/aos.css'; 
 
@@ -18,6 +19,12 @@ function Portfolio() {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
+
+      const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -80; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
 
     return (
         <React.StrictMode>
@@ -51,9 +58,30 @@ function Portfolio() {
                     <h2 class="researchSubtitle" id="TAR">User Research</h2>
                     <em class="researchQuestion">How can I use my portfolio to impress small companies for the function of frontend developer?</em>
                     <br />
-                    <div class="tag researchTag leftTag">Literature Study</div>
-                    <div class="tag researchTag">Expert Interview</div>
-                    <p class="researchText">I have always wanted to work for smaller companies in a small team. This is the place I feel most 
+                    <HashLink to="/portfolio/#userLitStudy" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Literature Study</div></HashLink>
+                    <HashLink to="/portfolio/#userExpInterview" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Expert Interview</div></HashLink>
+                    <p class="researchText"><b id="userLitStudy">Literature Study</b>
+                    <br /><br />For my literature study, I focussed on search terms like <em class="researchQuestion">frontend developer 
+                    portfolios</em> and <em class="researchQuestion">how to make a portfolio for a frontend developer</em>. The most important sites that I found were the 
+                    following: 
+                    <ul>
+                        <li><Link to="https://www.codecademy.com/resources/blog/how-to-make-your-front-end-developer-portfolio-stand-out/">Codecademy - How to Make Your Front-End Developer Portfolio Stand Out</Link></li>
+                        <li><Link to="https://skillcrush.com/blog/front-end-developer-portfolio/">Skillcrush - How to Approach Your Front End Developer Portfolio (And Why It’s So Important)</Link></li>
+                    </ul>
+                    With these sources, I found out that a frontend developer's portfolio needs to look good, be programmed well, without weird bugs and that 
+                    it should preferably have a framework, to show that you, as a programmer, are flexible with frameworks, like React, 
+                    Vue, Angular or Svelte.
+                    <br /><br /><b id="userExpInterview">Expert Interview</b>
+                    <br /><br />I had an expert interview with my boss and the director of Yookr, John van Helden. The interview was prepared with 
+                    questions like "What do you seek in a frontend developer?", "What are the most important factors to add someone to the Yookr team?", 
+                    "What do you want to see when a potential colleague is on a job interview?" and "How could I apply this to an online portfolio?". These questions gave me insight into what skills you must have and 
+                    what you have to show to become a frontend developer in a relative small team. I got answers that you should fit in the team, and that you don't 
+                    have to be incredibly good at programming (of course you have to be somewhat competent), but you should be able to have the learning capacity and the will to 
+                    grow. To show all of this in my portfolio, I had to make a good personalized About Me section. Reflections were also very important, to 
+                    show your growing capacity and to show that you are not just doing the same thing over and over again, while it can be optimized. Things like this 
+                    were very important to put in my portfolio.
+                    <br /><br /><b>Conclusion</b>
+                    <br /><br />I have always wanted to work for smaller companies in a small team. This is the place I feel most 
                     comfortable and happy in. From my expert interviews and literture study it has showed that smaller companies value your personal traits and fitting in the 
                     team the same as your skills, maybe even more. To be able to show this in a portfolio, I need to show a piece of myself. 
                     I needed to write in the way I would talk when I'm excited, according to John van Helden. This way, I can convey my enthousiasm in a pleasant way.
