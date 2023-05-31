@@ -149,7 +149,24 @@ function Portfolio() {
                     <div data-aos="fade-up">
                     <h1 class="researchTitle">Design</h1>
                     <h2 class="researchSubtitle">Inspiration</h2>
-                    <p class="researchText">After the research, I had a couple of design trends and example sites as inspiration. By using tools like 
+                    <p class="researchText"><b>Main Inspiration</b>
+                    <br /><br />My main inspiration was from the site of a local media company called Cult. They have just recently updated their site to make 
+                    it more visually pleasing and to improve user experience on the site. But the main reason why this design stood out to me, was that Cult is the rising star among 
+                    start-ups in the region where I live. Within only two years of existing, they have already made videos and commercials for companies like McDonalds or football clubs, like 
+                    VVV-Venlo and Fortuna Sittard. These big clients all see the work that Cult. has done on their portfolio site and Dirk Jeurissen, co-owner of Cult., said that with the new 
+                    site, there was a big increase in people looking through their entire portfolio, because it was very nice and instinctive to go through. And next to these 
+                    reasons, I also really liked the design, what drove me to use this as main inspiration. 
+                    <br /><br /><b>Color Scheme</b>
+                    <br /><br />I wanted to go for a professional and slick color scheme, and with color psychology this brought me to the colors 
+                    blue and purple. These colors, for example, stand for Trust, Competance and Ambition. The white also shows my Honesty, Simplicity and 
+                    Cleanliness. With these colors, I make sure that readers immediately have a certain idea with who I am and what I do. Also an idea of my main style 
+                    of design can be created when seeing the colors in the entirety of the portfolio.  
+                    <br /><br />
+                    <div data-aos="fade-up" >
+                    <div class="researchImg colorPsy"></div>
+                    </div>  
+                    <br /><br /><b>Conclusion</b>
+                    <br /><br />After the research, I had a couple of design trends and example sites as inspiration. By using tools like 
                     Behance and other sites that I knew and by using the results from my research, about what has to be in the portfolio, 
                     I was able to find out in what direction I wanted to go in: A minimalistic frontend developers portfolio, that shows my skills as a designer and as a programmer. 
                     In the picture below, you can see that I took inspiration from this site to make the 'information cards' about the projects.
@@ -161,7 +178,20 @@ function Portfolio() {
                     <br /><br />
                     <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Design</h2>
-                    <p class="researchText">The AI tool I started using, which I found during the research phase, is <Link to="https://www.uizard.io">Uizard</Link>. This tool helped me create a design 
+                    <p class="researchText"><b>Wireframing Tools</b>
+                    <br /><br />For making the design, I tested a couple of tools. These tools were Uizard, Visily, Figma and Adobe XD. Figma and Adobe XD were 
+                    both platforms I already worked with and I do like them, but they don't have AI generated wireframes from images or sketches. And since time was of the 
+                    essence, using AI to create the wireframe would be much more efficient. So it was between Visily and Uizard. While testing the platforms, I noticed that Uizard had 
+                    way more buttons and menus and it showed a lot of editing possibility. Visily only had three buttons in the side menu and it looked like it didn't have many functions. 
+                    That is, until you open the menus and see all the possibilities. But eventually I chose Uizard, because with the extra buttons I the side menu, it felt way more 
+                    structured. Functionality of both platforms was the same, down to the AI options. The only difference is the Uizard has a bit more AI functions. So that is why I chose Uizard. Looking back at this choice, Visily 
+                    probably would have been the better option, since Uizard had a couple of weird issues, like not being able to change the font to bold in an element with 
+                    regular text and eventually, all the menus and buttons to click on became too much of a hassle to go through. Also the extra AI functions that Uizard had, I 
+                    didn't even use and I will probably also not use in the future. Visily is cleaner with the same functionality, so next time I will try this one out.
+                    <br /><br /><b>Iterations</b>
+                    
+                    <br /><br /><b>Conclusion</b> 
+                    <br /><br />The AI tool I started using, which I found during the research phase, is <Link to="https://www.uizard.io">Uizard</Link>. This tool helped me create a design 
                     by using AI to give ideas and to tranform sketches and images into full-fledged wireframes. This spared me a great deal of time by instantly 
                     turning my main inspiration into a wireframe. The only lack that this program has, is that it lacks in feature, if you do not buy the full version. Also, you cannot write bold 
                     text in a text element that has regular text. You have to make two elements for that. But even with those lack in functions, a design could be made almost the same 

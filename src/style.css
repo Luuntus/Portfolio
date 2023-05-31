@@ -488,6 +488,12 @@ a{
   color: white;
 }
 
+.colorPsy{
+  background-image: url("./photos/colorPsy.jpg");
+  background-size: 50%;
+  background-position: 0px -80px;
+}
+
 @media only screen and (max-width: 1500px){
   .aboutMeQuote{
     font-size: 36pt;
