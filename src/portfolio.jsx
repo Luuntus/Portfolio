@@ -9,6 +9,8 @@ import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
 import RG from "./documents/Reading Guide Personal Project.pdf";
 import AOS from 'aos';
 import { HashLink } from "react-router-hash-link";
+import userExpInterview from "./documents/Expert Interview John van Helden.pdf";
+import benchCreation from "./documents/Benchmark Creation.pdf";
 
 import 'aos/dist/aos.css'; 
 
@@ -54,32 +56,56 @@ function Portfolio() {
                 </div>
                 <div class="explanation">
                 <div data-aos="fade-up">
-                    <h1 class="researchTitle">Research</h1>
+                    <h1 class="researchTitle">Empathise & Define</h1>
                     <h2 class="researchSubtitle" id="TAR">User Research</h2>
                     <em class="researchQuestion">How can I use my portfolio to impress small companies for the function of frontend developer?</em>
                     <br />
                     <HashLink to="/portfolio/#userLitStudy" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Literature Study</div></HashLink>
                     <HashLink to="/portfolio/#userExpInterview" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Expert Interview</div></HashLink>
                     <p class="researchText"><b id="userLitStudy">Literature Study</b>
-                    <br /><br />For my literature study, I focussed on search terms like <em class="researchQuestion">frontend developer 
-                    portfolios</em> and <em class="researchQuestion">how to make a portfolio for a frontend developer</em>. The most important sites that I found were the 
+                    <br /><br /><b>WHY? -</b> To really understand how to make a frontend portfolio for small companies, I had to delve into a literature study. This 
+                    literature study would give me the opportunity to find sources that show what elements are important for an aspiring frontend developer to put in their 
+                    portfolio. Via literature study, I can easily find multiple sources about what is important for a frontend portfolio, so I do not get a biased view from 
+                    only one source. Also, the fact that literature study is very accessible made me opt for this research method.
+                    <br /><br /><b>HOW? -</b> For my literature study, I focussed on search terms like <em class="researchQuestion"><b>frontend developer 
+                    portfolios</b></em> and <em class="researchQuestion"><b>how to make a portfolio for a frontend developer</b></em>. The most important sites that I found were the 
                     following: 
                     <ul>
                         <li><Link to="https://www.codecademy.com/resources/blog/how-to-make-your-front-end-developer-portfolio-stand-out/">Codecademy - How to Make Your Front-End Developer Portfolio Stand Out</Link></li>
                         <li><Link to="https://skillcrush.com/blog/front-end-developer-portfolio/">Skillcrush - How to Approach Your Front End Developer Portfolio (And Why It’s So Important)</Link></li>
                     </ul>
+                    I judged both sources on writer, writing style, date of publication and where it was uploaded/published. I found out that my sources had no 
+                    commercial goals and that the writers had a long time interest in the subject of writing. This is why I found the sources to be credible. 
+
                     With these sources, I found out that a frontend developer's portfolio needs to look good, be programmed well, without weird bugs and that 
                     it should preferably have a framework, to show that you, as a programmer, are flexible with frameworks, like React, 
                     Vue, Angular or Svelte.
+                    <p class="researchText">View the whole research document with the button below.</p>
+                    <a href={TA}>
+                        <input type="button" value="Research Document" class="viewBtn"/>
+                    </a>
                     <br /><br /><b id="userExpInterview">Expert Interview</b>
-                    <br /><br />I had an expert interview with my boss and the director of Yookr, John van Helden. The interview was prepared with 
-                    questions like "What do you seek in a frontend developer?", "What are the most important factors to add someone to the Yookr team?", 
-                    "What do you want to see when a potential colleague is on a job interview?" and "How could I apply this to an online portfolio?". These questions gave me insight into what skills you must have and 
+                    <br /><br /><b>WHY? -</b> I had access to an expert to do an expert interview with. By doing this, I could understand what the owner of a small 
+                    ICT company wants from an aspiring frontend developer in their portfolio. This expert could give me advice on certain things to put in my portfolio and 
+                    other pitfalls that I should avoid putting in the porfolio. 
+                    <br /><br /><b>HOW? -</b> I had an expert interview with my boss and the director of Yookr, John van Helden. The interview was prepared with 
+                    questions like 
+                    <ul>
+                        <li>What do you seek in a frontend developer?</li>
+                        <li>What are the most important factors to add someone to the Yookr team?</li>
+                        <li>What do you want to see when a potential colleague is on a job interview?</li>
+                        <li>How could I apply this to an online portfolio?</li>
+                    </ul> 
+                    These questions gave me insight into what skills you must have and 
                     what you have to show to become a frontend developer in a relative small team. I got answers that you should fit in the team, and that you don't 
                     have to be incredibly good at programming (of course you have to be somewhat competent), but you should be able to have the learning capacity and the will to 
                     grow. To show all of this in my portfolio, I had to make a good personalized About Me section. Reflections were also very important, to 
                     show your growing capacity and to show that you are not just doing the same thing over and over again, while it can be optimized. Things like this 
                     were very important to put in my portfolio.
+                    <p class="researchText">Here you can see the notes of my expert interview</p>
+                    <a href={userExpInterview}>
+                        <input type="button" value="Expert Interview" class="viewBtn"/>
+                    </a>
                     <br /><br /><b>Conclusion</b>
                     <br /><br />I have always wanted to work for smaller companies in a small team. This is the place I feel most 
                     comfortable and happy in. From my expert interviews and literture study it has showed that smaller companies value your personal traits and fitting in the 
@@ -89,20 +115,52 @@ function Portfolio() {
                     that companies also like. This is because they have a concrete list of what your skills are and they can see what your expertises are 
                     in mere seconds. Lastly, using frameworks shows that you have knowledge of how frameworks work. This is something that is always a plus if you want 
                     to be a good frontend developer.</p>
-                    <p class="researchText">View the whole research document with the button below.</p>
-                    <a href={TA}>
-                        <input type="button" value="Research Document" class="viewBtn"/>
-                    </a>
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
                     <h2 class="researchSubtitle" id="DT">Design Trends Research</h2>
                     <em class="researchQuestion">What are the current design trends?/How do I apply these trends to my portfolio?</em>
                     <br />
-                    <div class="tag researchTag leftTag">Benchmark Creation</div>
+                    <HashLink to="/portfolio/#benchmarkCreation" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Benchmark Creation</div></HashLink>
                     <div class="tag researchTag">Literature Study</div>
                     <div class="tag researchTag">Peer Review</div>
-                    <p class="researchText">Currently, there are a lot of design trends, with one of the most important being Artificial Intelligence. 
+                    <p class="researchText"><b id="benchmarkCreation">Benchmark Creation</b>
+                    <br /><br /><b>WHY? -</b> Portfolios for media designers, and especially frontend developers, are a niche. Creating something from scratch, 
+                    without inspiration, is almost impossible. In this case, benchmark creation is perfect to use. By looking at existing products within my niche, 
+                    I can get inspiration and get a feeling of what is good and what not. Professional portfolio sites will gives me both ideas for my own portfolio and 
+                    and for good design practices. Also, in my opinion, a benchmark creation does not cost a lot of time and it is fairly easy to do, but it, however, is 
+                    difficult to structure. But because of all the benefits, I opted for doing a benchmark creation.
+                    <br /><br /><b>HOW? -</b> Search terms like <em class="researchQuestion"><b>frontend developer portfolios</b></em> and <em class="researchQuestion"><b>design trends frontend portfolio</b></em>
+                    already brought me to the right path. Using Adobe Behance brought me to a couple of good benchmark, but using Google with the same search terms also gave me some nice 
+                    examples of how to make a good frontend portfolio. Also getting inspiration from protfolio sites that I already knew, from succesfull companies in my neighborhood, brought 
+                    me to some good examples.  
+                    <p class="researchText">Here you can see the examples I have found during the benchmark creation.</p>
+                    <a href={benchCreation}>
+                        <input type="button" value="Benchmark Creation" class="viewBtn"/>
+                    </a>
+                    <br /><br /><b>Literature Study</b>
+                    <br /><br /><b>WHY? -</b> There are a lot of sources online that talk about the current design trends. By referring to these 
+                    sources, I could get a view of what is important in the current design landscape and I could find out about things I would have 
+                    never tried out myself. This literature study is more focussed on finding best pratices and guidance instread of actual contextual 
+                    information.
+                    <br /><br /><b>HOW? -</b> The search terms that I used to find my sources are the following: 
+                    <ul>
+                        <li>AI in (media) design</li>
+                        <li>Frontend developer design trends</li>
+                        <li>Media design trends 2023</li>
+                        <li>Coding AIs</li>
+                    </ul>
+                    <br /><br />With these search terms, I came to the sources that you can find in the literature research document at the bottom of this 
+                    paragraph. The results were quite interesting. I found that there are AIs that can turn wireframes or sketches into designs and that there are 
+                    also some AIs that can turn an image into static code. Dark mode is very popular currently and that is for good reason. Not alone can you choose for 
+                    a different style, but it also has benefits in specific circumstances, like dark mode in winter that makes sure that you do not get blinded by a 
+                    bright white light. Animations and SPAs (Single Page Applications) are very popular as well. Animations can be personalized and they make a product 
+                    more interactive. And by programming a SPA, the Search Engine Optimalization is great and if the site has already been loaded, since going to another 
+                    component does not reload the page, you do not even need to have internet to visit all the elements on the site.
+                    <br /><br /><b>Peer Reviews</b>
+                       
+                    <br /><br /><b>Conclusion</b>
+                    <br /><br />Currently, there are a lot of design trends, with one of the most important being Artificial Intelligence. 
                     Designs can be made or perfected with online AI-tools, as found by my literature research. I tried out two of these tools: Visily and Uizard. I found that AI can indeed make the 
                     process of design way easier than making everything from scratch. And from peer reviews and benchmark creation I got a lot of inspiration and ideas of 
                     how to make a good design. With the benchmark creation, I created the main style for my portfolio and with peer reviews, I fixed a lot of small 
