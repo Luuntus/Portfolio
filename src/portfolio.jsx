@@ -7,6 +7,7 @@ import DT from "./documents/Design Trends Research.pdf";
 import AF from "./documents/Animations and frameworks.pdf";
 import PP from "./documents/Project plan S6 Niels Vissers V2.pdf";
 import RG from "./documents/Reading Guide Personal Project.pdf";
+import CR from "./documents/formative assessment.pdf";
 import AOS from 'aos';
 import { HashLink } from "react-router-hash-link";
 import userExpInterview from "./documents/Expert Interview John van Helden.pdf";
@@ -18,9 +19,9 @@ function Portfolio() {
 
     AOS.init();
 
-    useEffect(() => {
+    /*useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+      }, [])*/
 
       const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -122,8 +123,8 @@ function Portfolio() {
                     <em class="researchQuestion">What are the current design trends?/How do I apply these trends to my portfolio?</em>
                     <br />
                     <HashLink to="/portfolio/#benchmarkCreation" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Benchmark Creation</div></HashLink>
-                    <div class="tag researchTag">Literature Study</div>
-                    <div class="tag researchTag">Peer Review</div>
+                    <HashLink to="/portfolio/#litResearchTrends" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Literature Study</div></HashLink>
+                    <HashLink to="/portfolio/#peerRevTrends" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Peer Review</div></HashLink>
                     <p class="researchText"><b id="benchmarkCreation">Benchmark Creation</b>
                     <br /><br /><b>WHY? -</b> Portfolios for media designers, and especially frontend developers, are a niche. Creating something from scratch, 
                     without inspiration, is almost impossible. In this case, benchmark creation is perfect to use. By looking at existing products within my niche, 
@@ -138,7 +139,7 @@ function Portfolio() {
                     <a href={benchCreation}>
                         <input type="button" value="Benchmark Creation" class="viewBtn"/>
                     </a>
-                    <br /><br /><b>Literature Study</b>
+                    <br /><br /><b id="litResearchTrends">Literature Study</b>
                     <br /><br /><b>WHY? -</b> There are a lot of sources online that talk about the current design trends. By referring to these 
                     sources, I could get a view of what is important in the current design landscape and I could find out about things I would have 
                     never tried out myself. This literature study is more focussed on finding best pratices and guidance instread of actual contextual 
@@ -150,50 +151,84 @@ function Portfolio() {
                         <li>Media design trends 2023</li>
                         <li>Coding AIs</li>
                     </ul>
-                    <br /><br />With these search terms, I came to the sources that you can find in the literature research document at the bottom of this 
+                    With these search terms, I came to the sources that you can find in the literature research document at the bottom of this 
                     paragraph. The results were quite interesting. I found that there are AIs that can turn wireframes or sketches into designs and that there are 
                     also some AIs that can turn an image into static code. Dark mode is very popular currently and that is for good reason. Not alone can you choose for 
                     a different style, but it also has benefits in specific circumstances, like dark mode in winter that makes sure that you do not get blinded by a 
                     bright white light. Animations and SPAs (Single Page Applications) are very popular as well. Animations can be personalized and they make a product 
                     more interactive. And by programming a SPA, the Search Engine Optimalization is great and if the site has already been loaded, since going to another 
                     component does not reload the page, you do not even need to have internet to visit all the elements on the site.
-                    <br /><br /><b>Peer Reviews</b>
-                       
+                    <br /><br /><a href={DT}>
+                    <input type="button" value="Literature Study" class="viewBtn"/>
+                    </a>
+                    <br /><br /><b id="peerRevTrends">Peer Reviews</b>
+                    <br /><br /><b>WHY? -</b> By using peer reviews, I could let a lot of media designers easily check if my findings of the benchmark research 
+                    were any good. By making sure that I get good feedback from my peers, who have to make the same thing, I could easily trace some points of 
+                    improvement or get validation if my findings are in the right direction.
+                    <br /><br /><b>HOW? -</b> I did a very unformal way of a peer review. While at school, I was sitting at a table with five other students, the peers. I showed 
+                    them what I had found during my benchmark creation and asked their opinion. I told what I was using as main inspiration and how I would apply other elements to 
+                    my portfolio. And when my peers said that everything was good, I asked why something was good.
+                    <br /><br />Because of this peer review, I got validation that I was thinking in the right direction. My peers told me that my vision and finding 
+                    were quite good. They liked what colors I was going for, how I was going to structure the projects card and how I was going to make the navbar have the 
+                    HTML tags. These ideas all came from the results of the benchmark creation. However, the points I could improve on were the structure of the benchmark creation document and 
+                    that I should keep in mind to not just rely on inspiration from this benchmark creation, but to keep open to other ideas and remember to give it a 
+                    personal touch. Unfortunately, I have not made a document out of this peer review, because it was very unformal and not really planned out very much. 
+                    Next time I will keep in mind to document the peer review.
                     <br /><br /><b>Conclusion</b>
                     <br /><br />Currently, there are a lot of design trends, with one of the most important being Artificial Intelligence. 
                     Designs can be made or perfected with online AI-tools, as found by my literature research. I tried out two of these tools: Visily and Uizard. I found that AI can indeed make the 
                     process of design way easier than making everything from scratch. And from peer reviews and benchmark creation I got a lot of inspiration and ideas of 
-                    how to make a good design. With the benchmark creation, I created the main style for my portfolio and with peer reviews, I fixed a lot of small 
-                    details, like improving the about me with some interesting typography, instead of keeping the entire paragraphs in the some font weight and size and 
-                    changing some images to prevent both copyright issues and to prevent text not showing well over the background image. </p>
+                    how to make a good design and I got some validation and feedback about how I wanted to structure the design. With the benchmark creation, I created the 
+                    main style for my portfolio and got inspiration for how I was going to make some elements.</p>
                     </div>
                     <div data-aos="fade-up">
                     <div class="researchImg uizard"></div>
                     <p class="researchText">View the whole research document with the button below.</p>
-                    <a href={DT}>
-                    <input type="button" value="Research Document" class="viewBtn"/>
-                    </a>
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Animations and Frameworks</h2>
                     <em class="researchQuestion">How do I use animations in CSS/JavaScript?/What frameworks will help me with animations and responsiveness?</em>
                     <br />
-                    <div class="tag researchTag leftTag">Competitive Analysis</div>
-                    <div class="tag researchTag">Literature Study</div>
-                    <p class="researchText">By utilizing competitive analysis, the most efficient approach for the programming was found. I found that React was the way 
+                    <HashLink to="/portfolio/#comp-study"><div class="tag researchTag leftTag">Competitive Analysis</div></HashLink>
+                    <HashLink to="/portfolio/#comp-study"><div class="tag researchTag">Literature Study</div></HashLink>
+                    <p class="researchText"><b id="comp-study">Competitive Analysis & Literature Study (combination)</b>
+                    <br /><br /><b>WHY? -</b> By combining a competitive analysis and a literature study, I could find out what the best framework to use is 
+                    for me. A competitive analysis gives me the opportunity to see what option (framework) is the best in a set of options and to use arguments based 
+                    on findings from sources online, I could narrow down which framework was most effective and efficient for me to use or to learn. By using the literature 
+                    study, I could also find out about some libraries for animations to eventually use in my portfolio.
+                    <br /><br /><b>HOW? -</b> I already had quite some knowledge about frameworks like ReactJS and Vue, but by delving deep into these frameworks, I 
+                    was able to find the differences in the more niche details. This way, I could let literature support my statements about why a certain 
+                    framework is better to use than another for me. Search terms involved search terms like
+                    <ul>
+                        <li>Most used frontend frameworks</li>
+                        <li>State of JS survey</li>
+                        <li>Comparison of popular frontend frameworks</li>
+                        <li>React vs. Vue</li>
+                        <li>JavaScript vs. PHP</li>
+                        <li>Vanilla JS vs. frameworks</li>
+                        <li>Best animation libraries</li>
+                        <li>CSS animations and JS animations</li>
+                    </ul>
+                    By using these search terms, I found out the using a framework is never as fast and smooth as Vanilla JavaScript, but they give your code 
+                    structure and they introduce components and extra functions. Angular already quickly showed itself to be very difficult to learn, to use and it turned 
+                    out to be very slow, compared to other frameworks. Svelte was an interesting framework, but since it was fairly new, there wasn't a big enough community 
+                    for it yet, to make solving programming problems easier. It was, however, very well reviewed in State of JS, so it is an interesting prospect for the future, when 
+                    the community is bigger. Eventually, React and Vue proved themselves to be fairly similar in functions, speed and structure. Since I had quite some experience with 
+                    React already, I decided to go for React, to save some time and since it was so similar. For the animations, I found out about ScrollRevealJS, AnimeJS and 
+                    GSAP, which are libraries with built in animations, that I could use for my portfolio.
+                    <br /><br /> <a href={AF}>
+                    <input type="button" value="Animations & Framework Research" class="viewBtn"/>
+                    </a>
+                    <br /><br /><b>Conclusion</b>
+                    <br /><br />By utilizing competitive analysis combined with the literature study, the most efficient approach for my programming was found. I found that React was the way 
                     to go, because React has great support from, for example, Meta, Netflix and PayPal. I also already had some experience with React, which helped me with 
                     the time restraints. But what made React so important, was that React boosts Search Engine Optimalisation (SEO) greatly, and for my portfolio to eventually 
                     be seen by more people, this is an absolute must. Using a framework also shows that I can be flexible with coding and I am not forced to only use normal 
                     JavaScript, which is something that frontend companies will appreciate. 
                     </p>
                     </div>
-                    <div data-aos="fade-up">
-                    <p class="researchText">View the whole research document with the button below.</p>
-                    <a href={AF}>
-                    <input type="button" value="Research Document" class="viewBtn"/>
-                    </a>
-                    </div>
+                    
                     <br /><br />
                     <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Conclusion</h2>
@@ -205,7 +240,7 @@ function Portfolio() {
                     Preferably, you want to use a popular framework when starting development and lastly deploy your portfolio on a trustworthy hosting service.</p>
                     </div>
                     <div data-aos="fade-up">
-                    <h1 class="researchTitle">Design</h1>
+                    <h1 class="researchTitle">Ideate, Prototype and Test</h1>
                     <h2 class="researchSubtitle">Inspiration</h2>
                     <p class="researchText"><b>Main Inspiration</b>
                     <br /><br />My main inspiration was from the site of a local media company called Cult. They have just recently updated their site to make 
@@ -223,7 +258,7 @@ function Portfolio() {
                     <div data-aos="fade-up" >
                     <div class="researchImg colorPsy"></div>
                     </div>  
-                    <br /><br /><b>Conclusion</b>
+                    <b>Conclusion</b>
                     <br /><br />After the research, I had a couple of design trends and example sites as inspiration. By using tools like 
                     Behance and other sites that I knew and by using the results from my research, about what has to be in the portfolio, 
                     I was able to find out in what direction I wanted to go in: A minimalistic frontend developers portfolio, that shows my skills as a designer and as a programmer. 
@@ -236,6 +271,8 @@ function Portfolio() {
                     <br /><br />
                     <div data-aos="fade-up">
                     <h2 class="researchSubtitle">Design</h2>
+                    <div class="tag researchTag leftTag">Peer Review</div>
+                    <div class="tag researchTag">Co-Reflection</div>
                     <p class="researchText"><b>Wireframing Tools</b>
                     <br /><br />For making the design, I tested a couple of tools. These tools were Uizard, Visily, Figma and Adobe XD. Figma and Adobe XD were 
                     both platforms I already worked with and I do like them, but they don't have AI generated wireframes from images or sketches. And since time was of the 
@@ -246,27 +283,50 @@ function Portfolio() {
                     probably would have been the better option, since Uizard had a couple of weird issues, like not being able to change the font to bold in an element with 
                     regular text and eventually, all the menus and buttons to click on became too much of a hassle to go through. Also the extra AI functions that Uizard had, I 
                     didn't even use and I will probably also not use in the future. Visily is cleaner with the same functionality, so next time I will try this one out.
-                    <br /><br /><b>Iterations</b>
-                    
+                    <br /><br /><b>Iterations by Peer Review and Co-Reflection</b>
+                    <br /><br /><b>WHY? -</b> I involved multiple people into the design process, so I could be able to improve my design in places where I thought 
+                    it was good, but others felt there was room for improvement. This made me more aware of certain issues within my design and later even my documentation. 
+                    Talking to teachers (the stakeholders and experts) and to peers gave me a couple of insights to improve my media product.
+                    <br /><br /><b>HOW? -</b> The peer reviews were quite similar to the peer reviews I did during the empathise phase. Again, there was 
+                    a very non-formal atmosphere and I was asking what they liked, what they didn't like and why they thought so. But because of this non-formal way 
+                    of doing peer reviews, I did not make a document about this. The things that my peers liked were the way that I structured the project cards and they 
+                    especially liked the about me section. The points of improvement were that the pictures I used as backgroud for the project cards made the text on them 
+                    unclear and that a lot of the text was crammed without much space between the different elements. So I changed the background pictures and darkened the overlay and I 
+                    put more space between the different text elements.
+                    <br /><br />
+                    <div data-aos="fade-up" >
+                    <div class="researchImg iteration"></div>
+                    </div>  
+                    <br /><br /> My midterm review could be seen as a Co-Reflection, since the teachers are stakeholders in this project and I had a feedback/reflection 
+                    session with them. This session was planned in advance and I talked mostly about how I achieved the learning outcomes. Paul and Rose gave me a couple 
+                    of feedback points, mostly about me having to change my reflections into documentation. I mostly talked about what I did and what I learned, instead of 
+                    saying what I did, how I did it and what came out of the research/actions I have done. There were also a few remarks about the design, about that I should make 
+                    my list of main skills more visual and that I should add a favicon and give my pages titles, instead of React App with the React favicon.
+                    <br /><br />
+                    <a href={CR}>
+                    <input type="button" value="Co-Reflection Feedback" class="viewBtn"/>
+                    </a>
+                    <br /><br />
+                    <div data-aos="fade-up" >
+                    <div class="researchImg skillList"></div>
+                    </div>  
                     <br /><br /><b>Conclusion</b> 
                     <br /><br />The AI tool I started using, which I found during the research phase, is <Link to="https://www.uizard.io">Uizard</Link>. This tool helped me create a design 
                     by using AI to give ideas and to tranform sketches and images into full-fledged wireframes. This spared me a great deal of time by instantly 
                     turning my main inspiration into a wireframe. The only lack that this program has, is that it lacks in feature, if you do not buy the full version. Also, you cannot write bold 
                     text in a text element that has regular text. You have to make two elements for that. But even with those lack in functions, a design could be made almost the same 
                     as with Adobe XD. Compared to Adobe XD, which has no AI assistance of sketches to life, a lot of time was saved during 
-                    the design process.</p>
+                    the design process. <br /><br />
+                    By going through multiple tests, I knew what needed improvement. Most of the design was okay, but there were some small elements the needed some changing. 
+                    Even with the big time restraints, I was able to still do some testing and find out the improvement points. The most important of which 
+                    are that I need to show my skills in the about me section a bit more clearly and aestetically pleasing, and that I need 
+                    to write more in a conclusive way instead of a reflective way. Most other feedback point were smaller things, like images making 
+                    the text overlay unreadable or giving my pages names and a favicon. Unfortunately, because of the aforementioned time restraints, 
+                    a test report couldn't be written.</p>
                     </div>
                     <div data-aos="fade-up">
                     <div class="researchImg design"></div>
                     </div>
-                    <br /><br />
-                    <h2 class="researchSubtitle">Testing</h2>
-                    <p class="researchText">Not a lot of testing was done during the personal project, since time restraints were a big problem. 
-                    By still doing a couple of peer reviews and expert reviews, some place for improvement were found. The most important of which 
-                    are that I need to show my skills in the about me section a bit more clearly and aestetically pleasing, and that I need 
-                    to write more in a conclusive way instead of a reflective way. Most other feedback point were smaller things, like images making 
-                    the text overlay unreadable and a couple of elements being off-center. Eventually, I did test it some more after these changes and the 
-                    result was very positive. Unfortunately, because of the aforementioned time restraints, a test report couldn't be written.</p>
                     <br /><br />
                     <h1 class="researchTitle">Programming</h1>
                     <h2 class="researchSubtitle">Programming with React and Tabnine</h2>
