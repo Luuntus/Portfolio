@@ -504,6 +504,11 @@ a{
   background-size: 60%;
 }
 
+.bielefeld{
+  background-image: url("./photos/bielefelt\ discord.jpg");
+  background-size: 70%;
+}
+
 @media only screen and (max-width: 1500px){
   .aboutMeQuote{
     font-size: 36pt;
