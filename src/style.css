@@ -385,6 +385,7 @@ em{
 .researchSubtitle{
   font-size: 24pt;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .researchQuestion{

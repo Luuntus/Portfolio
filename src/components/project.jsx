@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../style.css";
-import {Link} from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Project(props) {
     const name = props.name;
@@ -22,9 +22,9 @@ function Project(props) {
                             {research == null ? null : <div class="tag leftTag">{research}</div>}
                             {design == null ? null : <div class="tag">{design}</div>}
                             {programming == null ? null : <div class="tag">{programming}</div>}
-                            <Link to={link} class="btnLink">
+                            <HashLink to={`${link}#top`} class="btnLink">
                                 <input type="button" value="View ->" class="viewBtn" />
-                            </Link>
+                            </HashLink>
                         </div>
                     </div>
                 </div>
