@@ -22,6 +22,7 @@ function YouthWork() {
     const [eduOpen, setEduOpen] = useState(false);
     const [natOpen, setNatOpen] = useState(false);
     const [interviewOpen, setInterviewOpen] = useState(false);
+    const [softwareOpen, setSoftwareOpen] = useState(false);
 
      const handleOpen = () => {
         setOpen(!open);
@@ -37,6 +38,10 @@ function YouthWork() {
 
     const handleInterviewOpen = () => {
         setInterviewOpen(!interviewOpen);
+    };
+
+    const handleSoftwareOpen = () => {
+        setSoftwareOpen(!softwareOpen);
     };
 
     const scrollWithOffset = (el) => {
@@ -325,53 +330,50 @@ function YouthWork() {
                 </div>
                 <br /><br />
                 <div data-aos="fade-up">
-                    <h2 class="researchSubtitle">Sketching</h2>
-                <div class="tag researchTag leftTag">Sketching</div>
-                    <p class="researchText"><b>Sketching</b>
-                    <br /><br /><b>WHY? -</b> Sketching is a really easy way to make your idea visual and since you don't pour too much time in these sketches, 
-                    it isn't as difficult to erase them and start over, compared to full wireframes or prototypes. By easily visualizing my thoughts and ideas, 
-                    we could prevent miscommunication about ideas and settle on a rough design.
-                    <br /><br /><b>HOW? -</b> With the sketching I used two whiteboards and I drew everthing that was on my mind and together as a group, we judged 
-                    what was good and what could use improvement. Then we took pictures of the sketches and we cleaned the whiteboard and started again. All of these 
-                    pictures were saved and sent to everyone using Discord. The same we did with the archetypes and their visualization.
-                    <br /><br /><b>Results -</b> With the sketches, we resulted in have a nice structure for our product. Everyone had the same vision and we had a good 
-                    base for the eventual wireframes and prototype. We also drew out and brainstormed about the archetypes. The archetypes are the visionary, the unifier and 
-                    the sentinel. These are based on a content creater, a moderator/event organizer and a protector of online danger respectively. In this way, we magaged to touch 
-                    upon every part of the online world.
-                    <br /><br />
-                    <a href={sketches}>
-                        <input type="button" value="View Sketches" class="viewBtn"/>
-                    </a>
+                    {softwareOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Software Design ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Software Design ⮟</h2>)}
+                    <br />
+                    {softwareOpen && (
+                    <div data-aos="fade-up">
+                    <p class="researchText"><b>C4 Diagram</b>
+                    <br /><br /><b>WHY? -</b> I made a C4 Diagram to visualize how the code would be structured and where everything will be saved when using the platform. This 
+                    would help me communitcate my vision of the code in an understandable way to both stakeholders and coders alike. With a C4 Diagram, communication about code 
+                    will be very smooth.
+
+                    <br /><br /><b>HOW? -</b> We had a lecture about the C4-Diagram from Erik and after the slides were uploaded to Teams, I used the examples to get an idea 
+                    of what to put in the C4-Diagram of our platform. Then I used Draw.io to create the C4-Diagram by using drag and drop components, to make the process of 
+                    making the diagram easier. 
+                    <br /><br /><b>Results -</b> The result is a C4-Diagram about the platform Social Sphere. This model is understandable and clear to make people understand how 
+                    the platform and the eventual code is going to look. The diagram can be accessed via the following link <Link to="https://viewer.diagrams.net/?tags=%7B%7D&target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&title=c4%20diagram.drawio#R7V1pd6O2Gv41OefeD8lht%2F0x27Sdk2nT8bRz51OPjOWYBoMLOIn7668kJBYhFmMMONFMFyNAgJbnfd5Fry70283bTwHYrr%2F4S%2BheaMry7UK%2Fu9C0iaIo6H%2B4ZB%2BX6FONljwFzjIuU9OCufMvpIXssp2zhGHuwsj33cjZ5gtt3%2FOgHeXKQBD4r%2FnLVr6bf%2BoWPMFCwdwGbrH0u7OM1nHp1FTS8p%2Bh87RmT1bZF28Au5gWhGuw9F8zRfr9hX4b%2BH4U%2F9q83UIXtx5rl%2Fi%2BTyVnkxcLoBcJbvAXf%2BP2QFe4wIZr9N0w4JrM%2BBVs6Gf%2B8HfodTXl1Q%2BeYcDOf9tv6flHdLPvsfI7GNqBs40cVCS8XXl1yPF%2FgLvxw%2Bi%2F6Kfno%2F88e%2F6rC5eoyVHvLNBNuF182wH4yzZw6YD4ES5YoIFEqr7QLBd9383K98jV0Z52jfXPzmcnLkMycK7RBaq1fUtPol9P9P%2BklkVaYNLv10x2ErXdgr8BlcVPzhcvnZekyIwrI42FKjPvMvdmr2OvEFRVdujXqlVfS2uxfdcPcrVcaLpN%2FojuNfMdnGsfUVvwn6llRunjZ1P9Hk3%2BevkLPEXb%2FYO1%2FfP7pTpNhn8yrNMv1dbRBve9Sj%2BAYoKKj5cgXENctYIOXtdOBOdbNLpRwSvCH3yD47q3yefqylT%2FNDFReRgF%2FjPMnrF01bylj8iUr8gffMcakMG%2FeXvC0HZlG1dbMgnQm98A13nCQ99Gcw%2BNd%2F1mAyNwv3Qi%2Bt5b3%2FEiMttMPD6UK9SGtwr5Fw%2BPW1Sm4iNani%2Bb5AtpgcoViso0QaGwyvyz0T%2F6TQDRqAIL0glK0o9ZeKGw8QKDCL5limhH%2FgR91ArBHl2SwH98B8V%2Bgx6%2BpjiqMbRcZzF0SgsBxaunpOYU3tAPOnbYIQW8FuA35xBIcSEIPMd7iiuIVn6wKULi3F9Fr6h5UPF8H0ZwU4qO166L5VAG6mKcDIkwY88TQKECvCWRHPHt28B%2FQt2Ef%2ForfJbMnGgNSRUhGpsh7l80%2BzxyL%2FmFxiewI%2BcFX%2FQK9hJfPwC%2BzirxNfB33pKgqFqCohkEJiPlBtjPT%2BQ2hpSe78Ei3KqKpd4oFaBawE0Q2AzfFSFM35nKTC0CLI9WBcDViogrQuEEGoswrImweRR4nSnT8iDeAWibedDWVQFqGyLU1npB7RR%2Fv0IEzWgChWtnWwq9DxhZMWAiCGVouwuhCGt3IUH8EngkM1CAF6hVo0s6rK8JDq%2BicsBoWgudHw1hthRNRGh7GJTgKyqgBHrLa6xkoaOF69vP39ZI9OTwI8vgBMhgKPhvMvOZioXvRHV%2FclxWTwEZphr%2Bi69zF%2BQF8BB3kOJWBAtUE3sFg1QFgihb8Pdus53Tj0KAxEroFRaGmwQy8btiBYZd7wfR2n%2FyPeDep6U38M2J%2FoevvjLp0Q%2F2Luj33RurCB%2FsMwdIzXLQy2NojMs8NIEyFeHDH9lzaVXkaJ894isrBYfQ3wU2rBgFMWFH0wcETzCqlTyaQlS8KrARoUlAJvRLXvEWoQmt7hFjfgpcqp5HrgTJWBXxZ9K7spo1V5E%2BqakoboZCRQTckm8cBu%2FmaKxjuLvfAMcNJaqVoJohUa0FqiXat1qFJkPMfW3GsRZrdmVZ7aa%2FqdfX1ScCpHrq%2FSWe1Xis5vTNNirpN6I0ovkJA4%2BwoC%2BOHfihj6e5wp4CgxcHyQWpMb57jRHXOIjGOL2dGjOrS41xolsTgqBSY%2BxLY%2BQB87xVRkah4CXjUFhrlAQqhxeWJFCdqYWJJni4WqjmlMKrSaIkHqIXNqN1tUpiLEOaKInT4YiipXK6ndFSSZyaNRWNWEn8CUYY1oBto%2FEbXTA3Q%2BxCQD%2BWIEqdDxmnwyrwNxIJuVFf7cuUSHhaA1l7uGKmqlq40ga0aXGWKJMnTI1NWmpNRcMotF%2BA460CovIpdzHozI9WbeeRj%2FDqgrlHGZjRaBMKetRRmvOapkiHj2BkX0nV9wOovkM5S6Xq%2Bw5UXw5WzXFpvkeHuBCkndv%2BFt7gAQ3oC6KLrrdbF5GJDOyKAboP8OyGgAohWICGhwJz%2B1eiWJ5t6kpIr8U6XTkA6%2FjYuxrsy2mRKVJpCod8FAwL4GWRP0U4jP%2FUgisDS9KU%2Bg3jute0eOFHEVJeWC1%2BgGYL%2F0bo09CE%2BOZvKUzSAga3%2BAMfQYQt5qgI0X7FEECtHyG%2BkYHaDF8N0HwF3pMLMyT2xvMf6AxR2Ns9guUyfq5CPsz1X69ZJDMuoaHOmafAty1W1uID9JhdECLO%2BRXGc4lScofdkQQowuD%2BBcaSgDxpEfruLoLXqZiRwqJDYTGdciaDaVFaqIolEBeTSc%2Fi4jtEEKfkgIeXDbdomiL6ngkWh%2FbaQ1Pqac9MEcCOPs9LefoddNEgjYMgiTcKqZ1ozhKKiMYmkREkzDE%2B%2BwoXIQIgao5ltzh4Pl3QMH5NIc%2FE7cS%2F%2BTlzePIWcUnaxOfD7e8t%2FHcQbo%2FkRmfcnheHB3F9Tb%2FW7mZdcn3lfnJ3fSe5fn%2FwPeNsKPpoyb5czNMZ9p4Jxg5oP9HlYp5RYeCpFvOoisHR13Et5znQB%2Fang9hkyj3%2F%2BPqQp5uF8PBSg4n0hTEoMKrNC9IXVuMLu8jEBFBf%2FjlGi%2BtNo8Vjej6MZ60AZ7rCwVRT35qqTWtqGnEoQAKDLQEQe8pCiN1tEgpzUKhJKGwBhaWgMwhEaBxEqFZbiDA4R74%2BpP%2F9QIjI2ulSy9sujIsW2DDNlEw5%2F5P5X215kvO%2FhAolDCbHX65OGNc4CLKonOPYUGZXLM7oYHDRBZVNtUb4ggYhTgmQXEZV3QpI1EqflUJWXGsfADZvav%2B3jdRf0Y374jHwX0hqIoaIq51n49MIjiIHJkkamrOpfsONmIWrE3NZpjVjf4UFNtiC4y3CbfJA6bw4TIRUL1IUmLRe4eImFsdJf2Cgr3FsLGKMfliwgjxoV%2Fs5CuJFVafXt9gEVeYBKb8jc0a7yDs5stJQK0rDcjdKW1Neex9H156LU5jyeImhi2x5QlcGz4BP7cq4fvzl4lhH9K%2F%2BEjYD8iyE7xnfbaYIKy%2Fk3Of5b7%2BiD%2F7527fHOX5x%2FPrn7gOR%2FufWEF69TEr6n6X%2F%2BQjUtvSmqD2GdZY8KueRsgSbv4BnAsyxGEBKqvvRLI0dvRWD9IMA%2FHC8k4uh3k22oI5WhcZaTANnkGENaI8xrDy0mnzAZWNjzESpqUmmDjkn7nsmHHfA%2BB9Drp%2BSnLY1p51xiZssUZLg0XLa%2BvRrMnUIjxemDBIaY%2BqQITOHGE2X4usDZg7RFC7Mp%2FVi%2FNTcOobV%2BDLB5ClArnH4D%2BU2HeObkN6cB75l0Q0zjq4ATjse4UgziKQTOZERLT1A4aDqssXnJZm1VZf5RTWFmroKXDB5okk%2FYYiohQPNo6VYLK2jZ2UdNWVM2DjC48eUNe9MAJ9Dz0l7wNdrauoK8HnLwkQbDvBxbqsFCCE7w8Wi8ad5WfBbAGyX5ciKL1Tm9hpuQDlNZ0mwynL5ZWLTdiR%2Bl6TDcp5xwToe2sn2Q8CN4sMdusGLkkgMWvktsUruAvJemUfEd9sYSlb4nopVAjLA7eLjRUeYzQLc7L3rIIER4BwwNKGJihH7lGFtVeETreLQGsdPyAg1fJZXC8471GH%2B%2B0MpUP8EEKYGGaT%2BgElWz4vFV6fKlyz%2BEBbfHYlvxeGPoO1WQ9puGgPSdpUzWU9bhzUYWk1Nw4Q1HBIe3CyNIRdNLNMXDpO%2B0L%2BzPnuX%2Bu9wHz270ePj1x%2Fu58vszJHZC2X2Qpm9sM9QDYuz3KiiDZ3VJCVulpWbas%2BsXK4LlGaTd2A2EUrBateyXBYolwW2RHhN4RaYqErjFId9rwt88DFC%2FoKN0HhQB77rijId3vqbLRqRVCc5fG3gNaYvKZTHlvJ4WaBL3sDxLpL8iOgaB5%2BGNAia2txBGL4ixtYriH%2B8dYAnh90OU8keZHu29Jv7TweBW6q%2BWCJg1ZSpdTsTkH8Z5Xwq6jzhlpeo57VFoly6967M2kJ4k1btIVfuHR5MUq4aNLA1U1xSrhRF1cqB6OioET5%2Fms7bARrbn%2Fm9E4pVdRQ3glfwic0czd%2BNuyMfapLez17JX61C2KfVfI5tbHGGC7tAkDvjzsK8GtQC4kG4JCElhEo%2FQ7iNGTWh0zRuZA28J2oISSi0EoLVO1hV%2BLGZ9EQyacmku2LS5llFhhRA8o%2FwQ%2BfOFeKDTCLxgZNIlNte8sEW5ZJloFiLGc8bk80gD14fqKl1VQ0TbXGLKRm2gz6mhGwg66vNXiU%2BlWGILEcxMcUmW5xLxnjOjHGoFBOSMZ49Y0z3pJG21w9EMs%2FK9qrKlBiS8QotubWMdzYc40UslUfW1oxXL1iKh2S8Uoc%2FHtKqY3UlpJ3RKomOIE2w0HlsSrymcMscVIPfvLC5Es9bKgtVDQNpci2yXIs8iJVg1EG1anV4l1yL%2FHHDYos%2Bp2nj7TLGaEGoXI0MI7kU%2BXzsBjJo693YDdrz6klDXq0OudvuhMvGo07aLkXWFH4dWqGqgVOsF91enXnEWPZNgBkvW2fA7cpJDkBEOi2EbI9z4g6TaxHehz9M7XBfIekQ%2B%2BgOMfO8c65L86sAIKpjLCUzPCNm2LP5VR0wz6QAm1onWTd4l9KgWdblTjzHMr5RMLt6G2Y%2FO%2FGIZ2514KzciUfSwkNo4XlZOcs3qrhkO1XEy%2FQlUcxhRnVopSSKH48oMgJYzxSH3I1HKxgU%2BRQkjZmiWTAo8lUNlNyQBa8rd2i8xxh2ynD7zILNPWq7i0z4PEtxQstTxzrxt%2Be86sR3j84heI4P0Ixbwwi9JT2Gkd1vRitpgOw%2BB1V1xKo0QEqmWc40C3grI%2FI%2FABU9K896bghLWtyYFp%2BMzjLCzX633gSoPS%2FWGtJihlHjoMWqNrvSZl0xY1Ftw5DjL8DxVgFhdiQUNWMtVT4BGyzTCNbu1qOi4hWtW0ETOvW7bzJvQ4OnsuZdSXTPlegah%2BQcl0RXEt1Kois97efGWusBQpNMsQ1TfMcGVDZ3a5mioQ7IFCe6mQcno3VE5mxSV9XoOGJ7p3uymgmQuc7WNC38XZRaTEV20LzR9H1YQUdBAkftlDeGyhstnfLvkUGeuVNeMkgBQhiSQX4sBllPDAdcqqNZxuzK5Aid1dq5LqptJAt22pkQD9xNMGdxlLsJjmg3QaN69aTcTlBuJyi3EzwZtdWLyzitIrVVFUvAbWfK0dw2mfHVEEEj3LJ0rJaY5IlMes2DTyYTHkZ%2Fwyja02EFdpGfB49WzCZliXQGp9zuOLcn2%2Bm4loscyTt0Y2ZczQwVjQNjopjTqZ4bHppidEUaGvY9%2Fe4X4O4gk9n8YHBdZxvCenkAwi0Zencr5w0PjU5mkMHzqqlSnEFTwfzhExE1mD4N22wiaDOOoSSuUky5Yr7FyJaIUnAtjslCvmnzslNgC%2BFkYmLu4KXixlku3bK%2BzE%2FqTnrP4ntvVuw9EfrpJ%2Bu9WaH3HM%2BJHNRy%2F8IsIc4mxnl1Ni6I2xxTJHpGbdLgEcbDG3vtuMsHsMf2U%2F0OKY72Mzu6WfuB8y9m3Glnp3qlZuWumOM7E6mPhf0j6x%2BVK%2FoC3nIXPoAwSuiE64Jt6KTkYINgxvFuKGUiF9VM9k5Gh5ofHSn8ZaWjcHgYJxoeploYHoXh4DoZPpu1NFRMyBKSmkzHHBW9VNOSB3LjnZ6WfKXNoAvIZ8wm%2FdCh2lkQX8tRujtSEiDO7aGPAA7pQYjGxyvEY4RDG8dbI%2FYaCfu8eorVjwTW8Vazbp%2Beqtf1Qq8jqUtD02lc%2Blf4zw43jwSHfsBB5aizpgpER8%2FgYEpwOBYckqk2AnA4ge3fDmBl3sUPav43ZaqGrjLl1qnI7Qz9HUWFMNFfa%2Fw3BzT%2B67rFi5a2ln9UU11VXZn9G4qoaUFECXTR%2Bzcb0nku2UwvbGbKDzmRqpOsTu%2BFzbA3kmzmCDYzbTwSytmMsNvHwWZAZK9hmlo6WhOnhCQ3%2BYmkSXLThtwkVCVHVGrT93cUfmAOuLBfNye85as1A5kWjGjDMhCraEsJfdsB7he4dMADBIGHkP0Rtd%2FKDyQT6Z%2BJ8CHR1lTARMxemYi0qxzNRKwu7CrCbu%2BfiVQPljHsnCsMHR63tBX62xP7wUHGhGS%2FnRIJXQpTtfYDJpRrpbc1pP2AV%2BbUWVvpbRS2FytU1bP0LrpHBZ6QcIumq%2FST9iWyLaPgCtEL2K2KgiBOJrIn0nhwvMjuxE8qjH3pXWQLjAfo%2B%2BVCiOLEkUlXjqEv2dQo78MTwlBgECZjlDrZD%2FeETOqq6pfJTLSChNqFEMsAGcnRL33RuP0mNX1StDj0G8kxMSR9OZa%2BJBPsHURyVA%2BW6o1opMWhw7WLLYV2eznNAhHqd%2BzVBpTTyU7hCYS23YVcT%2FJQFtB4IDldDKdP5LS0M%2FQqqM3Z%2BAR1MZ5FCupDBfWk8Ug4c0E9hjz%2FUlCfRlBbTRVqNtzHIagNta2gLqBxoap%2BBfW0aPKtcOzfxkuWpWe%2FP%2FGtm9xq0sSdmx3pU7NH8T0tGmGk%2BD5QfCfz7ijPvqjbR%2BEm2EknQbHLZbaksROZvt0EDAWGYTUFmwG%2FPrs5qylYMviq%2BsyTdCBWhfF2axKsciOzOsWQBKs6sNJaodVkCLhiKDRya6mEK3JRAG0Hvkh6VRjFY3DonDNiTVohljZuxBrUbHSOiIUOA9%2BPsncHYLv%2B4i8xztz%2FHw%3D%3D">
+                    Link to C4-Diagram for Social Sphere</Link>. 
                     </p>
+                    <div class="researchImg c4"></div>
+                    </div>)}
                 </div>
                 <br /><br />
                 <div data-aos="fade-up">
-                    {interviewOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleInterviewOpen}>Software Design ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleInterviewOpen}>Software Design ⮟</h2>)}
+                    {softwareOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Wireframes ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Wireframes ⮟</h2>)}
                     <br />
-                    {interviewOpen && (
+                    {softwareOpen && (
                     <div data-aos="fade-up">
-                    <p class="researchText"><b>C4 Diagram</b>
-                    <br /><br /><b>WHY? -</b> I wanted to know who the experts in the field of youth work were, what the opportunity was for social media usage and what 
-                        their daily tasks are, so I could get a good overview of the world of youth work. So what better way to get this information, than to interview 
-                        the experts (the youth workers) themselves.
-                    <br /><br /><b>HOW? -</b> We asked our stakeholder Fenna from Garage2020 to give us the contact information for Dirk-Jan from Dynamo youth work and 
-                    Matheus from Pitstop youth center. After Fenna had some deliberation with both parties, we were allowed to get the contact information and I was in charge 
-                    of calling Matheus, so I did. I called Matheus on his phone and he said he was busy and to send him a message. After messaging via WhatsApp, we got a place and 
-                    time and me and my project group started preparing questions regarding the our research questions and we wrote them down. Then, we went to Dynamo and Pistop and 
-                    we had our interviews. We also made sure that we arrange a meeting with Fenna every two weeks, to evaluate the progress of the project.
-                    <br /><br /><b>Results -</b> The youth workers at Dynamo deal with youth from 4-27 years old, at Pitstop, however, the ages more often are around 
-                    13-18 years old. The goal is to let the youth spend time with other youth and let them do activities together. Pitstop also focusses a bit more on the 
-                    problematic youth and they educate them to stay on the right path. This can sometimes be very difficult, because a lot of youth has trouble trusting the 
-                    authorities. A youth worker should be somewhat of a friend of the youth, but a responsible friend that can let them see the positive and the good side of 
-                    things. However, a youth worker should not be a 'pal' or a 'buddy' of the youth, in the words of Matheus, and influence them in a not-so-positive way. 
-                    <br /><br />At both Dynamo and Pitstop lied a great opportunity to connect more youth online, but there was a big lack of knowledge to use social media in 
-                    the right way to attract youth and to help more youth to connect with others. But the dangers of being online were also a great pain point for the youth workers. 
-                    But the opportunity of getting more youth to connect with each other was amazing. Currently, there were almost only physical events, which applied to a specific 
-                    group of the youth. But to include the youth who would rather stay at home, being online was the way to go for influencing the youth, in a good way, that do not go out.
-                    <br/><br/><b>The results of the interviews can be found in the big research document in the next chapter.</b>
+                    <p class="researchText"><b>Wireframes</b>
+                    <br />
+                    <div class="tag researchTag leftTag">Design Specification</div>
+                    <br /><br /><b>WHY? -</b> By making wireframes, we could see what the general flow of the platform was going to be and make describing and showing the 
+                    eventual design easier. These wireframes can be used as design specification and it makes clear to everyone what the current vision is for the product.
+
+                    <br /><br /><b>HOW? -</b> We made wireframes in Figma for the design specification. These wireframes were also prototyped to check how the flow of the platform feels 
+                    and what the eventual buttons and functions in the platform would do. We used a Figma grid to make sure that all elements on all the pages would align well with the rest 
+                    of the design. 
+                    <br /><br /><b>Results -</b> We ended up with a fully prototyped wireframe program. Thanks to these wireframes, everyone in the group knew what the vision for the project 
+                    was going to be. This was also something that could be shown to stakeholders and the idea would be clear. The wireframes can be seen with the following link: <Link to="https://www.figma.com/file/EzOeUHi7cO9I3iWoypAXCH/Design?type=design&node-id=1%3A2&t=MfmyXvYgnsmrNbhh-1">
+                    Link to wireframes for Social Sphere</Link>. We also immediately sent these wireframes to Matheus from Pitstop. We also sent them to Dirk-Jan from Dynamo, but he had a 
+                    concussion and couldn't answer our mails anymore. Feedback from Matheus was super positive and he really liked the idea and thought that a lot of youth workers could definitely benefit and learn 
+                    from this. A screenshot of Matheus' mail is added in the picure below.
                     </p>
+                    <div class="researchImg feedbackMatheus"></div>
                     </div>)}
                 </div>
+
                 </div>
                 </div>
                 </React.StrictMode>

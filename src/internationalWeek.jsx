@@ -2,8 +2,18 @@ import React from "react";
 import Navbar from "./components/navbar";
 import RG from "./documents/Reading Guide Group Project.pdf";
 import PP from "./documents/Project Plan International Project.pdf";
+import IQ from "./documents/Interview Questions.pdf";
+import SI from "./documents/Schoolplein14 interviews.pdf";
+import { Link } from "react-router-dom";
+import poster from "./photos/Soft Purple Illustrative Travel Tips Infographic Poster.png";
+import FS from "./documents/Feasibility solutions (Liangyu & Niels).pdf";
+import CS from "./documents/cardSorting.jpg";
+import AOS from 'aos';
 
 function InternationalWeek() {
+
+    AOS.init();
+
     return(
         <>
             <Navbar />
@@ -14,8 +24,8 @@ function InternationalWeek() {
                             <h1 class="white">With students from around Europe, I did an interdiciplinary project to innovate Schoolplein14 by the Cruyff Foundation.</h1>
                         </div>
                         <div class="projectDesc">
-                            <h2 class="projectTitle">Online Youth Work</h2>
-                            <em class="subtitle">Group Project</em>
+                            <h2 class="projectTitle">Cruyff Foundation</h2>
+                            <em class="subtitle">International Week</em>
                             <br />
                             <div class="tag leftTag">Research</div>
                             <div class="tag">Design</div>
@@ -31,28 +41,146 @@ function InternationalWeek() {
                 </div>
                 <div class="explanation">
                 <div data-aos="fade-up">
-                    <h1 class="researchTitle">Research</h1>
+                    <h1 class="researchTitle">Empathise and Define</h1>
+                    <h2 class="researchSubtitle" id="TAR">Preparation Week</h2>
+                    <em class="researchQuestion">What are new and innovative technologies you can use during the</em>
+                    <br />
+                    <div class="tag researchTag leftTag">Trend Analysis</div>
+                    <div class="tag researchTag">Design Specification</div>
+                    <p class="researchText"><b>Trend Analysis</b>
+                    <br /><br /><b>WHY? -</b> There are a lot of articles on the internet that talk about specific trends and how to use them in your project. 
+                    These trends can simplify the design process in a lot of ways and knowing about these trends, you don't limit yourself to just your own knowledge when 
+                    designing a solutions to an opportunity or problem.
+                    <br /><br /><b>HOW? -</b> I searched along Google for ICT trends that improve the design process. I also went to all of the inspiration sessions 
+                    that Fontys arranged and got some trends from there. Lastly, there were also trends that already popped in my head, like AI. We distributed the work among the 
+                    group mates and eventually, I went more in depth about AI, as deliberated by the group.
+                    <br /><br /><b>Results -</b> AI can be used for a placethora of things during the international week. It can be used to create 
+                    schematic designs, to create avatars (something we eventually did), but it can also be used as an autonomous learing tool. With AI, 
+                    a lot of data can be used and with machine learning, an AI model can sometimes even predict the future. These things can all be used to keep 
+                    in mind when developing a concept to not limit yourself when making a concept.
+                    <br /><br /><b>Design Specification</b>
+                    <br /><br /><b>WHY? -</b> We made a poster about our findings from the research, to easily see what was researched and to 
+                    make the information as easily readable as we can. With a poster, our everything we researched was presentable, even to people 
+                    with lesser knowlegde about ICT-Solutions.
+                    <br /><br /><b>HOW? -</b> We used Canva to make an aestically appealing poster. Canva also allowed us to collaborate on the poster and 
+                    divide the work between the groupmates. We used a template and made changes according to the information we were putting on the 
+                    poster.
+                    <br /><br /><b>Results -</b> The result is a poster with a short summary of the results of the research done in the preperation week. 
+                    Of course, it is visually appealing and the text is kept to a minimum, since that is how a poster should be. The poster can be seen here: 
+                    <br /><br />
+                    <img src={poster} alt="poster" style={{width: "60%"}}/>
+                    </p>
+                    </div>
+                    <br /><br />
+                <div data-aos="fade-up">
                     <h2 class="researchSubtitle" id="TAR">User Research</h2>
                     <em class="researchQuestion">What are the preferred play activities and engagement patterns of children in the target age group within the context of Schoolplein14, and how can this knowledge inform the design of technological innovations to encourage outdoor play?</em>
                     <br />
-                    <div class="tag researchTag leftTag">Literature Study</div>
-                    <div class="tag researchTag">Interviews</div>
-                    <p class="researchText">By interviewing some children playing at a Schoolplein14 and a Cruyff Court in Eindhoven, we found out some interesting things. 
-                    The kids said that the schoolplein was nice and that they liked the greenery. They wanted the schoolplein to be more luxurious, and they wanted 
-                    the greenery to be protected better, as balls often fly into the greenery, which damages it. They also would like a hockey field, since a lot 
-                    of the hockey sticks were broken, and they didn't have a spot to play. They would like a hockey field with artificial grass, but the grass should not be too high.</p>
+                    <div class="tag researchTag leftTag">Interviews</div>
+                    <p class="researchText"><b>Interviews</b>
+                    <br /><br /><b>WHY? -</b> By interviewing some children and their parents, I could get an understanding of what the kids 
+                    wanted and what they currently have on the Schoolplein14. With this knowledge, an impression could be formed about what brainstormed 
+                    ideas for a Schoolplein14 coating are good and fit the children that play there and which ones do not.
+                    <br /><br /><b>HOW? -</b> At first, we visited a Cruyff Court and started talking to the youth at the Cruyff Court. A 
+                    Cruyff Court is not the same as a schoolplein14, but we were asking more questions about the benefits of the Cruyff Court, to 
+                    get an idea of what was good about the initiative of Cruyff. After that, we went to a schoolplein14 and we interviewed children who were 
+                    just finishing school, with permission from parents/guardians of course. We had prepared some questions and also some ideas to also immediately 
+                    get some sort of testing done.
+                    <br /><br /><b>Results -</b> It was clear that weather did not matter to the children. It was moderately rainy and the kids still played outside 
+                    like it was sunny. The school and the children were really proud about Cody Gakpo, a professional Dutch footballer, who was a student at this school. 
+                    The school had a running track and the goal game field as coatings and a lot of children wanted to play hockey, but the school did not have the supplies for 
+                    this, in terms of hockey sticks. For a lot of children, it didn't really matter what they were doing, because they were just playing around whatever they had. 
+                    There was one thing that the children wanted changed, and that was the plants and bushes along the playground, because often a ball landed in these plants and the 
+                    children thought that that was a shame, because it damaged the plants. This showed that the children were already pretty invested in their evironment. A full report was not 
+                    written about the interviews, since the interviews were quite hectic and due to the short nature of the international week, 
+                    we also had to cut it due to time restraints, to finish our concept.</p>
+
                     <p class="researchText">My group mates Umair and Maarten also did some more research into our target audience, in the form of a literature study. It was found that soccer is 
                     still the most popular sport amongst both the boys and the girls, followed by skipping rope and tag. But that doesn't mean that other sports are not important. 
                     Games with a lot of social interaction are showed to be the most popular games on the playground. The kids (ages 6-12) also start to get more connected with friends, often 
                     with friends from the same gender. And this makes a small devide between the boys and the girls of these ages. The boys were 
                     more physically active during recess than girls and were more likely to engage in team sports, such as soccer and basketball. 
                     Girls were more likely to engage in creative and social activities, such as drawing, reading, and talking with friends.</p> 
-                    <p class="researchText">View the whole research document with the button below. (Note that only this literature research was NOT done by me)</p>
-                    <a href={PP}>
-                        <input type="button" value="Research Document" class="viewBtn"/>
+                    <p class="researchText">View the whole research document with the button below. (Note that I did not directly work on the literature research)</p>
+                    <a href={IQ} style={{display: "inline-block"}}>
+                        <input type="button" value="Interview Questions" class="viewBtn"/>
+                    </a>
+                    <a href={SI} style={{display: "inline-block", marginLeft: "30px"}}>
+                        <input type="button" value="Interview Documentation" class="viewBtn"/>
+                    </a>
+                    <a href={PP} style={{display: "inline-block", marginLeft: "30px"}}>
+                        <input type="button" value="Literature Research" class="viewBtn"/>
                     </a>
                     </div>
                     <br /><br />
+                    <div data-aos="fade-up">
+                    <h2 class="researchSubtitle" id="TAR">Feasibility Ideas</h2>
+                    <em class="researchQuestion">"What is the potential value and feasibility of the brainstormed ideas in effectively encouraging outdoor play among children in the context of Schoolplein14?</em>
+                    <br />
+                    <div class="tag researchTag leftTag">Competitive Analysis</div>
+                    <p class="researchText"><b>Competitive Analysis</b>
+                    <br /><br /><b>WHY? -</b> We needed to know what the pros and cons of our ideas were, to see which ideas would be the best overall. 
+                    Another benefit of doing a competitive analysis is that you look a your solutions from multiple sides, the goods and the bads to inform the 
+                    stakeholder about why they should use this solution and vice versa.
+
+                    <br /><br /><b>HOW? -</b> First, I wrote down our ideas again and then started to think in the values of the Cruyff Foundation. 
+                    I coupled the values and the SDG's of the Cruyff Foundation to these ideas and I visualized if they were in line with the 
+                    ideals. I also checked the results from the interviews to see how they line up with our ideas. Then I checked technical 
+                    feasibility and financial feasibility, since the Cruyff Foundation does have a budget, even if they said that we could think of the most 
+                    crazy ideas, so we would not limit ourselves in the design process.  
+                    <br /><br /><b>Results -</b> We had three ideas: A beamer that projects lights in a musical chairs type game, a running track with sensors/cameras that measures your speed and shows you running as an avatar and an expansion on the 
+                    muscial light with all kinds of different games/patterns stored in the beamer. The first idea showed promise, by being easy-to-use and being sustainable (fun) 
+                    on a long-term. The biggest downside were that it required building a sound and light system, which would be a big thing for a primary school and 
+                    a non-profit organisation. This same downside also applied to the third idea, but the third idea had more games in it and was even more 
+                    accessible, with the different games. As for the running track, it was very low-cost and easy to make and the avatars would encourage the kids to 
+                    try running out to see themselves as a fictional character. The two biggest downsides from this were that this could become very competitive, to a 
+                    point were it isn't fun anymore and that people could make fun of each others running.
+                    <br /><br />Eventually, we decided not to go with any of these ideas, since for none of these it felt like the pros 
+                    outweighed the cons. We did took a liking to the music aspect and decided to continue with the idea of music, but on a larger 
+                    scale, so that the pros would eventually outweigh the cons. We knew that no idea would be absolutely perfect, but these ideas were just not of 
+                    enough benefit.</p>
+                    <a href={FS} style={{display: "inline-block"}}>
+                        <input type="button" value="Feasibility Solutions" class="viewBtn"/>
+                    </a>
+                    </div>
+
+                    <br /><br />
+
+                    <div data-aos="fade-up">
+                    <h1 class="researchTitle">Prototype and Ideate</h1>
+                    <h2 class="researchSubtitle" id="TAR">Brainstorming</h2>
+                    <div class="tag researchTag leftTag">Card Sorting</div>
+                    <div class="tag researchTag">Sketching</div>
+                    <p class="researchText"><b>Card Sorting</b>
+                    <br /><br /><b>WHY? -</b> By thinking up all kinds of ideas and eventually sorting them, every group member could put their ideas 
+                    on paper. And when sorted, we could see what categories or ideas overlap with each other, to narrow down a specific direction or idea 
+                    for the design process.
+                    <br /><br /><b>HOW? -</b> Everyone in the group had five minutes to write down whatever ideas they had in their mind for a 15th coating for 
+                    the Johan Cruyff Foundation. We wrote them down on post-its and  put them all on a big canvas. After this, we sorted everything in categories 
+                    and discussed about the card and categories.
+                    <br /><br /><b>Results -</b> There immediately was a mutual interest in applying music to innovate upon the existing coatings of schoolplein14.
+                    Using projectors or lights was also a thing that we all agreed on. With projectors and light, a lot of games can be played, since the lights can change 
+                    to whatever game the kids would like to play. A lot of technical possibilities came to the forefront, even from the students who were not studying 
+                    ICT.
+                    <br /><br /> 
+                    <img src={CS} alt="cardSorting" style={{width: "60%"}}/>
+                    <br /><br /><b>Sketching</b>
+                    <br /><br /><b>WHY? -</b> We proceeded the brainstorming by drawing what we thought was going to be the new innovation for Schoolplein14 
+                    for the Cruyff Foundation. By doing this, we could see what our groupmates were thinking and we had some visualization of what direction 
+                    everyone wanted to go in. 
+                    <br /><br /><b>HOW? -</b> We all grabbed an A5 piece of paper from Umair's sketch book and we started drawing whatever we thought was going to 
+                    be the next innovation. Because of the card sorting, music and ICT-solutions were the main focus during the sketching and like the, we could see 
+                    in what direction we wanted to go in. 
+                    <br /><br /><b>Results -</b> Everyone had made some sort of rythmn game that combines using a projector for changing lights 
+                    and music to get the children to play. But we had this in all sorts of ways. A projected piano where you had to jump on, or some 
+                    virtually playing instrument were a couple of the ideas. Eventually, we combined all these ideas together to make the musical light room, 
+                    which was a projector what could project spotlight with which you can play a game equivalent to musical chairs. But you could also play games like 
+                    throw the ball in the blue spotlight or run to the yellow light zone etc. Everything, of course, with music. Unfortunately, these 
+                    sketches were not photographed.
+                    <br /><br />
+                    </p>
+                    </div>
+
                     </div>
                 </div>
         </>

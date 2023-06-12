@@ -510,6 +510,16 @@ a{
   background-size: 70%;
 }
 
+.c4{
+  background-image: url("./photos/c4.png");
+  background-size: 70%;
+}
+
+.feedbackMatheus{
+  background-image: url("./photos/feedbackMatheus.png");
+  background-size: 70%;
+}
+
 @media only screen and (max-width: 1500px){
   .aboutMeQuote{
     font-size: 36pt;
