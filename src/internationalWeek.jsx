@@ -11,6 +11,7 @@ import CR from "./documents/Research-Group1(Maarten&Umair).pdf";
 import CS from "./documents/cardSorting.jpg";
 import CD from "./documents/Concept document.pdf";
 import video from "./photos/Untitled.mp4";
+import groupPhoto from "./photos/groupPhoto.jpg";
 import AOS from 'aos';
 
 function InternationalWeek() {
@@ -75,6 +76,20 @@ function InternationalWeek() {
                     </p>
                     </div>
                     <br /><br />
+
+                    <div data-aos="fade-up">
+                    <h2 class="researchSubtitle" id="Communication">Communication</h2>
+                    <p class="researchText">Communication went really well with my group mates. We could get everything done with each other and 
+                    everyone was on location every day. We even did some things after school together, just to learn more about cultures and each other. 
+                    With my advisor (Bernhard Sill), we had a good connection. We briefed him every day about progress and he also even joined the group photo. 
+                    In short, The communication in the group was seamless. Tasks were done when they were expected and our stakeholders were constantly briefed about 
+                    our progress. The entire group is even following each other on Instagram to keep in touch.</p>
+
+                    <img src={groupPhoto} alt="group photo" style={{width: "90%"}}/>
+
+                    <br /><br />
+                    </div>
+
                 <div data-aos="fade-up">
                     <h2 class="researchSubtitle" id="TAR">User Research</h2>
                     <em class="researchQuestion">What are the preferred play activities and engagement patterns of children in the target age group within the context of Schoolplein14, and how can this knowledge inform the design of technological innovations to encourage outdoor play?</em>
