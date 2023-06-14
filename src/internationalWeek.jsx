@@ -7,7 +7,10 @@ import SI from "./documents/Schoolplein14 interviews.pdf";
 import { Link } from "react-router-dom";
 import poster from "./photos/Soft Purple Illustrative Travel Tips Infographic Poster.png";
 import FS from "./documents/Feasibility solutions (Liangyu & Niels).pdf";
+import CR from "./documents/Research-Group1(Maarten&Umair).pdf";
 import CS from "./documents/cardSorting.jpg";
+import CD from "./documents/Concept document.pdf";
+import video from "./photos/Ambitious achievers Group 5.mp4";
 import AOS from 'aos';
 
 function InternationalWeek() {
@@ -42,7 +45,7 @@ function InternationalWeek() {
                 <div class="explanation">
                 <div data-aos="fade-up">
                     <h1 class="researchTitle">Empathise and Define</h1>
-                    <h2 class="researchSubtitle" id="TAR">Preparation Week</h2>
+                    <h2 class="researchSubtitle" id="prepWeek">Preparation Week</h2>
                     <em class="researchQuestion">What are new and innovative technologies you can use during the</em>
                     <br />
                     <div class="tag researchTag leftTag">Trend Analysis</div>
@@ -108,7 +111,7 @@ function InternationalWeek() {
                     <a href={SI} style={{display: "inline-block", marginLeft: "30px"}}>
                         <input type="button" value="Interview Documentation" class="viewBtn"/>
                     </a>
-                    <a href={PP} style={{display: "inline-block", marginLeft: "30px"}}>
+                    <a href={CR} style={{display: "inline-block", marginLeft: "30px"}}>
                         <input type="button" value="Literature Research" class="viewBtn"/>
                     </a>
                     </div>
@@ -142,6 +145,17 @@ function InternationalWeek() {
                     <a href={FS} style={{display: "inline-block"}}>
                         <input type="button" value="Feasibility Solutions" class="viewBtn"/>
                     </a>
+                    </div>
+
+                    <br /><br />
+
+                    <div data-aos="fade-up">
+                    <h2 class="researchSubtitle" id="TAR">Conclusion</h2>
+                    <em class="researchQuestion">"How can the integration of synthetic media, mixed reality, artificial intelligence, and/or big data in the design of Schoolplein14 and its surrounding environment effectively encourage children and young people to engage in outdoor play and physical activities?"</em>
+                    <p class="researchText">By grabbing existing ideas and applying technical solutions to them, a lot can be made interesting. By incorporating physical challenges, blending
+                    technology with nature, fostering creativity and customization, promoting social interaction, and considering age-appropriate content, we can create engaging experiences that encourage outdoor
+                    play and support children's physical, cognitive, and social development. Children nowadays grow up in a world of technology and entertainment. The gamification element of sporting would 
+                    bring entertainment, technology and sporting together. This way, children will learn about technology, while also gaining all the benefits of sporting.</p>
                     </div>
 
                     <br /><br />
@@ -181,6 +195,77 @@ function InternationalWeek() {
                     </p>
                     </div>
 
+                    <div data-aos="fade-up">
+                    <h2 class="researchSubtitle" id="TAR">Ideating on ideas</h2>
+                    <div class="tag researchTag leftTag">Ideation</div>
+                    <p class="researchText"><b>Ideation</b>
+                    <br /><br /><b>WHY? -</b> Ideating upon our ideas made the final concept way better. We could have just settled 
+                    on what we already had, but there is always improvement to be found on places that you would overlook.  
+                    <br /><br /><b>HOW? -</b> By referring to the experts (the teachers and supervisors), the demands of our stakeholder Axel and the 
+                    interviews, where we got some opinions on what ideas we already had. With that feedback, we improved upon the existing ideas we had 
+                    and we made new ideas. Eventually, one of these ideas was used for the final concept.
+                    <br /><br /><b>Results -</b> By iterating our ideas, we went from just music, to music and a beamer, to the musical lights game (the 
+                    musical chairs type game), to the musical lights version with extra games to play. And finally, we came to the idea of creating a rock 
+                    band type game, all because of the feedback we got along the way. The feedback was often to think big and to check the target audience and 
+                    see what they want. That brought us to the eventual concept.</p>
+                    <br /><br /> 
+                    </div>
+
+                    <div data-aos="fade-up">
+                    <h2 class="researchSubtitle" id="TAR">Final Concept</h2>
+                    <div class="tag researchTag leftTag">Concept</div>
+                    <div class="tag researchTag">Design Specification</div>
+                    <div class="tag researchTag">Pitch</div>
+                    <p class="researchText"><b>Concept</b>
+                    <br /><br /><b>WHY? -</b> Making a concept helps stakeholders understand what you are going to make. Your eventual 
+                    product is going to be based upon this concept, so to make a schematic diplay. For the Cruyff Foundation, they will recieve 
+                    a the plan of the 15th coating that we made, so they can perfect it as they see fit and tweak it where they want. With the concept, 
+                    tweaks can still easily be made, compared to a full prototype. 
+                    <br /><br /><b>HOW? -</b> For the final concept, we took all the findings from our research and card sortings and brainstorming 
+                    sessions. With all the feedback in mind, we started developing the concept by sketching and we described it in a concept document. 
+                    We also made a video about the concept.
+                    <br /><br /><b>Results -</b> We made a concept document, some sketches and a video as concept. The concept became a 
+                    rock band type game, where the children 'play' an instrument by jumping on the lights in the ground that light up. It is also accessible 
+                    for kids with disabilities, since the 'singer' just has to make noise to reach the right notes and get points. The groups get randomly formed 
+                    by bracelets that light up when it's your turn. By doing this, we encouraged team play and not locking people out of the game for being less good. 
+                    The kids will see their avatars play on a big projected screen on the wall, and difficulty is defined by AI, to not make everything too 
+                    difficult or easy for the children. To still also have a little competitiveness, of 2 teams of maximum 4 players should play the game. The winner 
+                    will be determined by the amount of points and correct light they have hit.
+                    </p>
+                    <a href={CD} style={{display: "inline-block"}}>
+                        <input type="button" value="Concept Document" class="viewBtn"/>
+                    </a>
+                    </div>
+                    <br /><br /> 
+                    <p class="researchText"><b>Design specification</b>
+                    <br /><br /><b>WHY? -</b> Making a visual representation of the concept removes any kinds of miscommunication and 
+                    misinterpretation of the concept. The video we made would also work as a sort of pitch and documentation of the design 
+                    process.
+                    <br /><br /><b>HOW? -</b> I filmed our design process during the international week and we eventually edited it with 
+                    iMovie. We also used some images from the interviews. We rendered this video and presented it in front of our stakeholders as a 
+                    final presentation.
+                    <br /><br /><b>Results -</b> During the final presentation, our original stakeholder Axel couldn't be there, so he invited someone else 
+                    from the Cruyff Foundation. This is necessary context, because Axel told us not to limit ourself to anything, not even budget or 
+                    feasibility. The person who gave us feedback on the video did care about feasibility and budget. Of course way paid slight attention 
+                    to these points, but we did not limit ourselves on these points. This resulted in the feedback being that we had a good and creative idea, 
+                    but that feasibility and budget would be a major issue.</p>
+                    <iframe src={video} frameborder="0" title="video" style={{width: "55vw", height: "60vh"}}></iframe>
+
+                    <br /><br /><p class="researchText"><b>Pitch</b>
+                    <br /><br /><b>WHY? -</b> I also prepared a pitch for our concept to present in case we were chosen as winner of the category. 
+                    I could give a broader explaination about what the concept was about, how it would be structured and how it would eventually look like 
+                    in practice. This all to make the concept as clear as possible to the stakeholders.
+                    <br /><br /><b>HOW? -</b> The pitch was made with Canva again. I used a template and changed the graphics to fit our concept. I put in all the 
+                    important information about the concept: the context of the Cruyff Foundation and their vision, the opportunity and the goal and of course the 
+                    detailed view of the concept. I was going to use the story about Johan Cruyff sporting with a child with Down syndrome as storytelling to show that 
+                    we really understood the context of the Foundation, but unfortunately, I could not do my pitch, since my group wasn't chosen as the winner 
+                    in our category.
+                    <br /><br /><b>Results -</b> The result is a good looking pitch with everything in it. The concept was eventually given a name thanks to feedback from 
+                    the teacher: Jam Jumpers. No script was writting for this pitch, because I want to keep a red line in my head, but not prepare everything and 
+                    choke on my words if I forget something. I did not get further feedback on the pitch, since I wasn't able to do the pitch, as told before. 
+                    The pitch can still be found here: <Link to="https://www.canva.com/design/DAFiryajJlw/0e3mnH4NFBc0VrUC41d8JA/edit?utm_content=DAFiryajJlw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+                    Link to the Canva Pitch</Link></p>
+                    <div class="researchImg pitch"></div>
                     </div>
                 </div>
         </>

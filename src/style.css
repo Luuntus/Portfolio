@@ -520,6 +520,12 @@ a{
   background-size: 70%;
 }
 
+.pitch{
+  background-image: url("./photos/pitch.png");
+  background-size: 50%;
+  margin-bottom: 30px;
+}
+
 @media only screen and (max-width: 1500px){
   .aboutMeQuote{
     font-size: 36pt;
