@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/navbar";
-import RG from "./documents/Reading Guide Group Project.pdf";
+import RG from "./documents/Reading Guide International Week.pdf";
 import PP from "./documents/Project Plan International Project.pdf";
 import IQ from "./documents/Interview Questions.pdf";
 import SI from "./documents/Schoolplein14 interviews.pdf";
