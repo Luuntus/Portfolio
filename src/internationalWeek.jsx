@@ -10,7 +10,7 @@ import FS from "./documents/Feasibility solutions (Liangyu & Niels).pdf";
 import CR from "./documents/Research-Group1(Maarten&Umair).pdf";
 import CS from "./documents/cardSorting.jpg";
 import CD from "./documents/Concept document.pdf";
-import video from "./photos/Ambitious achievers Group 5.mp4";
+import video from "./photos/Untitled.mp4";
 import AOS from 'aos';
 
 function InternationalWeek() {
@@ -117,7 +117,7 @@ function InternationalWeek() {
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="TAR">Feasibility Ideas</h2>
+                    <h2 class="researchSubtitle" id="FeasResearch">Feasibility Ideas</h2>
                     <em class="researchQuestion">"What is the potential value and feasibility of the brainstormed ideas in effectively encouraging outdoor play among children in the context of Schoolplein14?</em>
                     <br />
                     <div class="tag researchTag leftTag">Competitive Analysis</div>
@@ -150,7 +150,7 @@ function InternationalWeek() {
                     <br /><br />
 
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="TAR">Conclusion</h2>
+                    <h2 class="researchSubtitle" id="Conclusion">Conclusion</h2>
                     <em class="researchQuestion">"How can the integration of synthetic media, mixed reality, artificial intelligence, and/or big data in the design of Schoolplein14 and its surrounding environment effectively encourage children and young people to engage in outdoor play and physical activities?"</em>
                     <p class="researchText">By grabbing existing ideas and applying technical solutions to them, a lot can be made interesting. By incorporating physical challenges, blending
                     technology with nature, fostering creativity and customization, promoting social interaction, and considering age-appropriate content, we can create engaging experiences that encourage outdoor
@@ -162,7 +162,7 @@ function InternationalWeek() {
 
                     <div data-aos="fade-up">
                     <h1 class="researchTitle">Prototype and Ideate</h1>
-                    <h2 class="researchSubtitle" id="TAR">Brainstorming</h2>
+                    <h2 class="researchSubtitle" id="brainstorming">Brainstorming</h2>
                     <div class="tag researchTag leftTag">Card Sorting</div>
                     <div class="tag researchTag">Sketching</div>
                     <p class="researchText"><b>Card Sorting</b>
@@ -196,7 +196,7 @@ function InternationalWeek() {
                     </div>
 
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="TAR">Ideating on ideas</h2>
+                    <h2 class="researchSubtitle" id="ideating">Ideating on ideas</h2>
                     <div class="tag researchTag leftTag">Ideation</div>
                     <p class="researchText"><b>Ideation</b>
                     <br /><br /><b>WHY? -</b> Ideating upon our ideas made the final concept way better. We could have just settled 
@@ -212,7 +212,7 @@ function InternationalWeek() {
                     </div>
 
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="TAR">Final Concept</h2>
+                    <h2 class="researchSubtitle" id="finalConcept">Final Concept</h2>
                     <div class="tag researchTag leftTag">Concept</div>
                     <div class="tag researchTag">Design Specification</div>
                     <div class="tag researchTag">Pitch</div>
