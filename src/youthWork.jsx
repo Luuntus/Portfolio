@@ -11,6 +11,9 @@ import NR from './documents/What are the most used social platforms for youth in
 import { HashLink } from "react-router-hash-link";
 import RP from "./documents/Research Phase.pdf";
 import sketches from "./documents/sketches.pdf";
+import prototype from "./documents/Design Phase.pdf";
+import testReport from "./documents/Testing Report.pdf";
+import groupFeedback from "./documents/Group Feedback Niels.pdf";
 
 import 'aos/dist/aos.css'; 
 
@@ -373,6 +376,105 @@ function YouthWork() {
                     <div class="researchImg feedbackMatheus"></div>
                     </div>)}
                 </div>
+
+                <br /><br />
+                <div data-aos="fade-up">
+                    {softwareOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Prototype ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Prototype ⮟</h2>)}
+                    {softwareOpen && (
+                    <div data-aos="fade-up">
+                    <div class="tag researchTag leftTag">Prototyping</div>
+                    <p class="researchText"><b>High-fidelity Prototype</b>
+                    <br /><br /><b>WHY? -</b> We made a prototype based on the wireframes to make the concept and flow of the product as clear as possible and to get the 
+                    best possible feedback we could get. This prototype is an active representation of the direction we were going in and it showed the stakeholders a product 
+                    they could already test. The feedback we can get from this prototype could improve it even more.
+
+                    <br /><br /><b>HOW? -</b> The prototype was made with Figma, based on the wireframe we made previously. I was in charge of the archetype quiz, the lesson quiz and I checked all 
+                    the other prototype pages and gave feedback on them. We made multiple iterations per page and eventually we chose the pages with the best user flow and design, in our 
+                    opinions. The we prototyped our pages together to map out the user interactions and to eventually test the prototype.
+                    <br /><br /><b>Results -</b> The eventual result was a full fledged prototype based upon thought through design decisions. We also made a report about the design, how we 
+                    stuctured it and why we did it this way. The prototype is clickable and can be used for usability tests and design tests. The full prototype is found via this link: 
+                    <Link to="https://www.figma.com/file/EzOeUHi7cO9I3iWoypAXCH/Design?type=design&node-id=1%3A3&t=MByC21yzTehJxN4Z-1"> Link to Figma Prototype</Link>.
+                    </p>
+                    <a href={prototype}>
+                        <input type="button" value="Design Document" class="viewBtn"/>
+                    </a>
+                    </div>)}
+                </div>
+
+                <br /><br />
+
+                <div data-aos="fade-up">
+                    {softwareOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Testing ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Testing ⮟</h2>)}
+                    {softwareOpen && (
+                    <div data-aos="fade-up">
+                    <div class="tag researchTag leftTag">Thinking Aloud</div>
+                    <div class="tag researchTag">Usability Testing</div>
+                    <p class="researchText"><b>Thinking Aloud</b>
+
+                    <br /><br /><b>WHY? -</b> We wanted to gather opinions and feedback from experts, to see on which places we could still improve. The reason we did think aloud with 
+                    experts was that experts can give more constructive feedback during and after the test, instead of just random opinions on a platform, since it is used for the first time. 
+                    A thinking aloud test would have been more subjective with someone who is not an expert.
+
+                    <br /><br /><b>HOW? -</b> We asked Maaike and Joris, two teachers in the field of Media Design, and Fenna Dam, stakeholder from Garage2020, to do the thinking aloud test. We prepared a testing plan and some after-test 
+                    questions. For the test with Fenna, we planned a physical meeting with her, but due to illness, it had to be online. For the test itself, we decided to go for a test where 
+                    Maaike, Joris and Fenna could click whatever they want and start a conversation about possible feedback points. 
+                    As a group of five people, we split up in two groups, one of three and one of two. 
+                    <br /><br /><b>Results -</b> Results were plenty. In short, starting at the lesson page immediately after making an account is not good user experience. 
+                    The lesson page itself was a bit cluttered and it was confusing to see which lessons you have done, which ones were locked and which were active. The results page of the 
+                    quiz was also confusing, because you could not get feedback on the questions you did wrong or retake the quiz. We should also add a disclaimer to the Archetype quiz that this 
+                    is not a true personality quiz, but just for fun and not based on factual research.
+
+                    <br /><br />
+
+                    <b>Usability Testing</b>
+
+                    <br /><br /><b>WHY? -</b> We also wanted to have objective feedback about the usability of our prototype, so that is why we decided to do usability testing 
+                    with the target audience. This way, we could check what things have to be changed and which elements of the prototype are good.
+
+                    <br /><br /><b>HOW? -</b> I called Matheus again on his phone and I planned a meeting with him and the other tree youth workers of Dynamo. Iva also tried to get a 
+                    hold of Jimmy, the digicoach at Dynamo, and Dirk-Jan, via the mail (we did not have their phone numbers), but we did not get a response. We decided to go with task based 
+                    testing, where we made up a scenario tied to an assignment (activity) in the prototype. Then we let the testers try to complete the activity and closely observe what went right 
+                    and what could have gone better. At the end, we had a list of questions for the testers to answer for some final feedback.
+
+                    <br /><br /><b>Results -</b> Again, we got a lot of feedback. The main point was that we need to add a scroll down indicator, because most testers did not scroll down on any page. 
+                    Again, the results page for the quiz came to light with the same problems as the thinking aloud test. Some youth workers really liked the style, while others thought it might be a 
+                    bit childish. But they were all very excited about the content and the archetypes. In general, the youth workers found that this could be a really great tool to learn social media, 
+                    however, it has to keep updating itself when an app changes its UI or has an update. Lastly, it has to keep up to date with new trends, like new popular social media platforms 
+                    among the youth. 
+                    </p>
+                    <a href={testReport}>
+                        <input type="button" value="Test Report" class="viewBtn"/>
+                    </a>
+                    </div>)}
+                </div>
+
+                <br /><br />
+
+                <div data-aos="fade-up">
+                    {softwareOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Group Feedback ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleSoftwareOpen}>Group Feedback ⮟</h2>)}
+                    {softwareOpen && (
+                    <div data-aos="fade-up">
+                    <p class="researchText"><b>360 degrees feedback</b>
+
+                    <br /><br /><b>WHY? -</b> We wanted to evaluate how everyone did during the group project and see what the good things and the points of improvement were for 
+                    everyone. These points are great to know for future development and to make group work more smooth for all coming projects.
+
+                    <br /><br /><b>HOW? -</b> We made a google forms survey and gave it to everyone from the group. There was a section with the same questions per person and 
+                    like this, we could submit our feedback to our group mates. We also explicitly asked the group to be critical but fair in their feedback, because you 
+                    can only learn from this. 
+                    <br /><br /><b>Results -</b> The biggest point of feedback that came from the group reflection is that I should try to sometimes listen more and talk less. I could be 
+                    very overwhelming for some people and I am definitely aware of this. I should stay quiet more and listen better to others, while also asking questions about them, instead of 
+                    focussing on me. The rest of the feedback was very positive. My communication was good (with the exeption of the previous statement) and I have fairly contributed to the 
+                    project, according to my group mates. So with this feedback point, I am looking to try to close my mouth every now and then, to prevent myself from speaking over someone and 
+                    'intimidating' them. I will also ask people to shush me if I talk too much. However, I do want to keep my decisiveness when others are swinging between multiple choices, because this is a very important skill to me, even though this can sometimes 
+                    lead to some heated arguments.  
+                    </p>
+                    <a href={groupFeedback}>
+                        <input type="button" value="Group Feedback" class="viewBtn"/>
+                    </a>
+                    </div>)}
+                </div>
+
 
                 </div>
                 </div>
