@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Navbar from "./components/navbar";
 import { Link } from "react-router-dom";
 import Footer from "./components/footer";
@@ -19,6 +19,42 @@ function Portfolio() {
 
     AOS.init();
 
+    const [open, setOpen] = useState(false);
+    const [desTrendsOpen, setDesTrendsOpen] = useState(false);
+    const [frameworkOpen, setFrameworkOpen] = useState(false);
+    const [inspirationOpen, setInspirationOpen] = useState(false);
+    const [designOpen, setDesignOpen] = useState(false);
+    const [programmingOpen, setProgrammingOpen] = useState(false);
+    const [hostOpen, setHostOpen] = useState(false);
+
+
+     const handleOpen = () => {
+        setOpen(!open);
+    };
+
+    const handleDesTrendsOpen = () => {
+        setDesTrendsOpen(!desTrendsOpen);
+    };
+
+    const handleFrameworkOpen = () => {
+        setFrameworkOpen(!frameworkOpen);
+    };
+
+    const handleInspirationOpen = () => {
+        setInspirationOpen(!inspirationOpen);
+    };
+
+    const handleDesignOpen = () => {
+        setDesignOpen(!designOpen);
+    };
+
+    const handleProgrammingOpen = () => {
+        setProgrammingOpen(!programmingOpen);
+    };
+
+    const handleHostOpen = () => {
+        setHostOpen(!hostOpen);
+    };
     /*useEffect(() => {
         window.scrollTo(0, 0)
       }, [])*/
@@ -58,8 +94,10 @@ function Portfolio() {
                 <div class="explanation">
                 <div data-aos="fade-up">
                     <h1 class="researchTitle">Empathise & Define</h1>
-                    <h2 class="researchSubtitle" id="TAR">User Research</h2>
+                    {open ? (<h2 class="researchSubtitle" id="TAR" onClick={handleOpen}>User Research ⮝</h2>) : (<h2 class="researchSubtitle" id="TAR" onClick={handleOpen}>User Research ⮟</h2>)}
                     <em class="researchQuestion">How can I use my portfolio to impress small companies for the function of frontend developer?</em>
+                    <br />
+                    {open ? (<div data-aos="fade-up">
                     <br />
                     <HashLink to="/portfolio/#userLitStudy" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Literature Study</div></HashLink>
                     <HashLink to="/portfolio/#userExpInterview" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Expert Interview</div></HashLink>
@@ -77,27 +115,28 @@ function Portfolio() {
                     </ul>
                     I judged both sources on writer, writing style, date of publication and where it was uploaded/published. I found out that my sources had no 
                     commercial goals and that the writers had a long time interest in the subject of writing. This is why I found the sources to be credible. 
-
-                    With these sources, I found out that a frontend developer's portfolio needs to look good, be programmed well, without weird bugs and that 
+                    <br /><br />
+                    <b>Results -</b> With these sources, I found out that a frontend developer's portfolio needs to look good, be programmed well, without weird bugs and that 
                     it should preferably have a framework, to show that you, as a programmer, are flexible with frameworks, like React, 
-                    Vue, Angular or Svelte.
-                    <p class="researchText">View the whole research document with the button below.</p>
+                    Vue, Angular or Svelte. This shows your professionalism and flexibility as a programmer and your design skills as a designer. Two key skills for frontend developers.</p>
                     <a href={TA}>
                         <input type="button" value="Research Document" class="viewBtn"/>
                     </a>
                     <br /><br /><b id="userExpInterview">Expert Interview</b>
-                    <br /><br /><b>WHY? -</b> I had access to an expert to do an expert interview with. By doing this, I could understand what the owner of a small 
+                    <br /><br /><p class="researchText"><b>WHY? -</b> I had access to an expert to do an expert interview with. By doing this, I could understand what the owner of a small 
                     ICT company wants from an aspiring frontend developer in their portfolio. This expert could give me advice on certain things to put in my portfolio and 
                     other pitfalls that I should avoid putting in the porfolio. 
-                    <br /><br /><b>HOW? -</b> I had an expert interview with my boss and the director of Yookr, John van Helden. The interview was prepared with 
+                    <br /><br /><b>HOW? -</b> I had an expert interview with my boss and the director of Yookr, John van Helden. I asked John at work if he could do an interview 
+                    about what he looks for in a potential frontend developer. The interview was planned within no-time. The interview was prepared with 
                     questions like 
                     <ul>
                         <li>What do you seek in a frontend developer?</li>
                         <li>What are the most important factors to add someone to the Yookr team?</li>
                         <li>What do you want to see when a potential colleague is on a job interview?</li>
                         <li>How could I apply this to an online portfolio?</li>
-                    </ul> 
-                    These questions gave me insight into what skills you must have and 
+                    </ul>
+                    <br /><br /> 
+                    <b>Results -</b> These questions gave me insight into what skills you must have and 
                     what you have to show to become a frontend developer in a relative small team. I got answers that you should fit in the team, and that you don't 
                     have to be incredibly good at programming (of course you have to be somewhat competent), but you should be able to have the learning capacity and the will to 
                     grow. To show all of this in my portfolio, I had to make a good personalized About Me section. Reflections were also very important, to 
@@ -107,20 +146,15 @@ function Portfolio() {
                     <a href={userExpInterview}>
                         <input type="button" value="Expert Interview" class="viewBtn"/>
                     </a>
-                    <br /><br /><b>Conclusion</b>
-                    <br /><br />I have always wanted to work for smaller companies in a small team. This is the place I feel most 
-                    comfortable and happy in. From my expert interviews and literture study it has showed that smaller companies value your personal traits and fitting in the 
-                    team the same as your skills, maybe even more. To be able to show this in a portfolio, I need to show a piece of myself. 
-                    I needed to write in the way I would talk when I'm excited, according to John van Helden. This way, I can convey my enthousiasm in a pleasant way.
-                    Also, I should show my skills. Of course, my work will speak for itself, but to touch on it in the 'about me' is something found out 
-                    that companies also like. This is because they have a concrete list of what your skills are and they can see what your expertises are 
-                    in mere seconds. Lastly, using frameworks shows that you have knowledge of how frameworks work. This is something that is always a plus if you want 
-                    to be a good frontend developer.</p>
+                    </p>
+                    </div>) : (null)}
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="DT">Design Trends Research</h2>
+                    {desTrendsOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleDesTrendsOpen}>Design Trends Research ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleDesTrendsOpen}>Design Trends Research ⮟</h2>)}
                     <em class="researchQuestion">What are the current design trends?/How do I apply these trends to my portfolio?</em>
+                    <br />
+                    {desTrendsOpen ? (<div data-aos="fade-up">
                     <br />
                     <HashLink to="/portfolio/#benchmarkCreation" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Benchmark Creation</div></HashLink>
                     <HashLink to="/portfolio/#litResearchTrends" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Literature Study</div></HashLink>
@@ -135,6 +169,9 @@ function Portfolio() {
                     already brought me to the right path. Using Adobe Behance brought me to a couple of good benchmark, but using Google with the same search terms also gave me some nice 
                     examples of how to make a good frontend portfolio. Also getting inspiration from protfolio sites that I already knew, from succesfull companies in my neighborhood, brought 
                     me to some good examples.  
+                    <br /><br /><b>Results -</b> I made a document with the inspiration that I found during the benchmark creation. Due to this benchmark creation, I had a vision about how 
+                    I wanted to design and structure my portfolio. Things like the HTML-like tags in the navbar and the blue/white color scheme really interested me. Also the way how some portfolios 
+                    structured their projects was interesting to me, so I took all of these things as inspiration for my eventual design. 
                     <p class="researchText">Here you can see the examples I have found during the benchmark creation.</p>
                     <a href={benchCreation}>
                         <input type="button" value="Benchmark Creation" class="viewBtn"/>
@@ -152,7 +189,8 @@ function Portfolio() {
                         <li>Coding AIs</li>
                     </ul>
                     With these search terms, I came to the sources that you can find in the literature research document at the bottom of this 
-                    paragraph. The results were quite interesting. I found that there are AIs that can turn wireframes or sketches into designs and that there are 
+                    paragraph. 
+                    <br /><br /><b>Results -</b> The results were quite interesting. I found that there are AIs that can turn wireframes or sketches into designs and that there are 
                     also some AIs that can turn an image into static code. Dark mode is very popular currently and that is for good reason. Not alone can you choose for 
                     a different style, but it also has benefits in specific circumstances, like dark mode in winter that makes sure that you do not get blinded by a 
                     bright white light. Animations and SPAs (Single Page Applications) are very popular as well. Animations can be personalized and they make a product 
@@ -168,30 +206,26 @@ function Portfolio() {
                     <br /><br /><b>HOW? -</b> I did a very unformal way of a peer review. While at school, I was sitting at a table with five other students, the peers. I showed 
                     them what I had found during my benchmark creation and asked their opinion. I told what I was using as main inspiration and how I would apply other elements to 
                     my portfolio. And when my peers said that everything was good, I asked why something was good.
-                    <br /><br />Because of this peer review, I got validation that I was thinking in the right direction. My peers told me that my vision and finding 
+                    <br /><br /><b>Results -</b> Because of this peer review, I got validation that I was thinking in the right direction. My peers told me that my vision and finding 
                     were quite good. They liked what colors I was going for, how I was going to structure the projects card and how I was going to make the navbar have the 
                     HTML tags. These ideas all came from the results of the benchmark creation. However, the points I could improve on were the structure of the benchmark creation document and 
                     that I should keep in mind to not just rely on inspiration from this benchmark creation, but to keep open to other ideas and remember to give it a 
                     personal touch. Unfortunately, I have not made a document out of this peer review, because it was very unformal and not really planned out very much. 
-                    Next time I will keep in mind to document the peer review.
-                    <br /><br /><b>Conclusion</b>
-                    <br /><br />Currently, there are a lot of design trends, with one of the most important being Artificial Intelligence. 
-                    Designs can be made or perfected with online AI-tools, as found by my literature research. I tried out two of these tools: Visily and Uizard. I found that AI can indeed make the 
-                    process of design way easier than making everything from scratch. And from peer reviews and benchmark creation I got a lot of inspiration and ideas of 
-                    how to make a good design and I got some validation and feedback about how I wanted to structure the design. With the benchmark creation, I created the 
-                    main style for my portfolio and got inspiration for how I was going to make some elements.</p>
-                    </div>
+                    Next time I will keep in mind to document the peer review.</p>
                     <div data-aos="fade-up">
                     <div class="researchImg uizard"></div>
-                    <p class="researchText">View the whole research document with the button below.</p>
+                    </div>
+                    </div>):(null)}
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle">Animations and Frameworks</h2>
+                    {frameworkOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleFrameworkOpen}>Animations and Frameworks ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleFrameworkOpen}>Animations and Frameworks ⮟</h2>)}
                     <em class="researchQuestion">How do I use animations in CSS/JavaScript?/What frameworks will help me with animations and responsiveness?</em>
                     <br />
-                    <HashLink to="/portfolio/#comp-study"><div class="tag researchTag leftTag">Competitive Analysis</div></HashLink>
-                    <HashLink to="/portfolio/#comp-study"><div class="tag researchTag">Literature Study</div></HashLink>
+                    {frameworkOpen ? (<div data-aos="fade-up">
+                    <br />
+                    <HashLink to="/portfolio/#comp-study" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Competitive Analysis</div></HashLink>
+                    <HashLink to="/portfolio/#comp-study" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Literature Study</div></HashLink>
                     <p class="researchText"><b id="comp-study">Competitive Analysis & Literature Study (combination)</b>
                     <br /><br /><b>WHY? -</b> By combining a competitive analysis and a literature study, I could find out what the best framework to use is 
                     for me. A competitive analysis gives me the opportunity to see what option (framework) is the best in a set of options and to use arguments based 
@@ -210,7 +244,7 @@ function Portfolio() {
                         <li>Best animation libraries</li>
                         <li>CSS animations and JS animations</li>
                     </ul>
-                    By using these search terms, I found out the using a framework is never as fast and smooth as Vanilla JavaScript, but they give your code 
+                    <b>Results -</b> By using these search terms, I found out the using a framework is never as fast and smooth as Vanilla JavaScript, but they give your code 
                     structure and they introduce components and extra functions. Angular already quickly showed itself to be very difficult to learn, to use and it turned 
                     out to be very slow, compared to other frameworks. Svelte was an interesting framework, but since it was fairly new, there wasn't a big enough community 
                     for it yet, to make solving programming problems easier. It was, however, very well reviewed in State of JS, so it is an interesting prospect for the future, when 
@@ -220,13 +254,8 @@ function Portfolio() {
                     <br /><br /> <a href={AF}>
                     <input type="button" value="Animations & Framework Research" class="viewBtn"/>
                     </a>
-                    <br /><br /><b>Conclusion</b>
-                    <br /><br />By utilizing competitive analysis combined with the literature study, the most efficient approach for my programming was found. I found that React was the way 
-                    to go, because React has great support from, for example, Meta, Netflix and PayPal. I also already had some experience with React, which helped me with 
-                    the time restraints. But what made React so important, was that React boosts Search Engine Optimalisation (SEO) greatly, and for my portfolio to eventually 
-                    be seen by more people, this is an absolute must. Using a framework also shows that I can be flexible with coding and I am not forced to only use normal 
-                    JavaScript, which is something that frontend companies will appreciate. 
                     </p>
+                    </div>):(null)}
                     </div>
                     
                     <br /><br />
@@ -241,7 +270,8 @@ function Portfolio() {
                     </div>
                     <div data-aos="fade-up">
                     <h1 class="researchTitle">Ideate, Prototype and Test</h1>
-                    <h2 class="researchSubtitle">Inspiration</h2>
+                    {inspirationOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleInspirationOpen}>Inspiration ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleInspirationOpen}>Inspiration ⮟</h2>)}
+                    {inspirationOpen ? (<div data-aos="fade-up">
                     <p class="researchText"><b>Main Inspiration</b>
                     <br /><br />My main inspiration was from the site of a local media company called Cult. They have just recently updated their site to make 
                     it more visually pleasing and to improve user experience on the site. But the main reason why this design stood out to me, was that Cult is the rising star among 
@@ -258,21 +288,26 @@ function Portfolio() {
                     <div data-aos="fade-up" >
                     <div class="researchImg colorPsy"></div>
                     </div>  
+                    <br /><br />
                     <b>Conclusion</b>
                     <br /><br />After the research, I had a couple of design trends and example sites as inspiration. By using tools like 
                     Behance and other sites that I knew and by using the results from my research, about what has to be in the portfolio, 
                     I was able to find out in what direction I wanted to go in: A minimalistic frontend developers portfolio, that shows my skills as a designer and as a programmer. 
                     In the picture below, you can see that I took inspiration from this site to make the 'information cards' about the projects.
                     The inspiration shown in the picture is from <Link to="https://www.cult.nl">Cult.nl</Link>, a media company in Horst, who were in the same building as me during my internship.</p>
-                    </div>
+                    <br />
                     <div data-aos="fade-up">
                     <div class="researchImg inspiration"></div>
                     </div>
+                    </div>):(null)}
+                    </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle">Design</h2>
-                    <div class="tag researchTag leftTag">Peer Review</div>
-                    <div class="tag researchTag">Co-Reflection</div>
+                    {designOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleDesignOpen}>Design ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleDesignOpen}>Design ⮟</h2>)}
+                    {designOpen ? (<div data-aos="fade-up">
+                    <br />
+                    <HashLink to="/portfolio/#desPeerRev" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Peer Review</div></HashLink>
+                    <HashLink to="/portfolio/#desPeerRev" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Co-Reflection</div></HashLink>
                     <p class="researchText"><b>Wireframing Tools</b>
                     <br /><br />For making the design, I tested a couple of tools. These tools were Uizard, Visily, Figma and Adobe XD. Figma and Adobe XD were 
                     both platforms I already worked with and I do like them, but they don't have AI generated wireframes from images or sketches. And since time was of the 
@@ -283,7 +318,7 @@ function Portfolio() {
                     probably would have been the better option, since Uizard had a couple of weird issues, like not being able to change the font to bold in an element with 
                     regular text and eventually, all the menus and buttons to click on became too much of a hassle to go through. Also the extra AI functions that Uizard had, I 
                     didn't even use and I will probably also not use in the future. Visily is cleaner with the same functionality, so next time I will try this one out.
-                    <br /><br /><b>Iterations by Peer Review and Co-Reflection</b>
+                    <br /><br /><b id="desPeerRev">Iterations by Peer Review and Co-Reflection</b>
                     <br /><br /><b>WHY? -</b> I involved multiple people into the design process, so I could be able to improve my design in places where I thought 
                     it was good, but others felt there was room for improvement. This made me more aware of certain issues within my design and later even my documentation. 
                     Talking to teachers (the stakeholders and experts) and to peers gave me a couple of insights to improve my media product.
@@ -323,13 +358,16 @@ function Portfolio() {
                     to write more in a conclusive way instead of a reflective way. Most other feedback point were smaller things, like images making 
                     the text overlay unreadable or giving my pages names and a favicon. Unfortunately, because of the aforementioned time restraints, 
                     a test report couldn't be written.</p>
-                    </div>
                     <div data-aos="fade-up">
                     <div class="researchImg design"></div>
                     </div>
+                    </div>): (null)}
+                    </div>
                     <br /><br />
                     <h1 class="researchTitle">Programming</h1>
-                    <h2 class="researchSubtitle">Programming with React and Tabnine</h2>
+                    <div data-aos="fade-up">
+                    {programmingOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleProgrammingOpen}>Programming with React and Tabnine ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleProgrammingOpen}>Programming with React and Tabnine ⮟</h2>)}
+                    {programmingOpen ? (<div data-aos="fade-up">
                     <p class="researchText">AI tools and frameworks were also used for programming. The AI tool Tabnine see what you are 
                     typing as code and tries to finish the line of code. This works very nice, since this AI tool often writes the right code and 
                     it shows you what it wants to fill in, so you can judge if you want Tabnine to fill in the code or not. The React framework, as 
@@ -337,15 +375,22 @@ function Portfolio() {
                     easier with components and the structure of React. It still does have a couple of limitations, like the smooth scrolling to an element, 
                     when you click on a link from an external source. However, this can be solved with extra libraries and some extra time.</p>
                     <br /><br />
-                    <h2 class="researchSubtitle">Hosting</h2>
+                    </div>):(null)}
+                    </div>
+                    <br /><br />
+                    <div data-aos="fade-up">
+                    {hostOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleHostOpen}>Hosting ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleHostOpen}>Hosting ⮟</h2>)}
+                    {hostOpen ? (<div data-aos="fade-up">
                     <p class="researchText">For hosting my website, I used a tool called Vercel. This is a tool that is free for hosting, 
                     but it does give you a watermark in your URL. The main reason why this tool was used, is that it has a built-in CI/CD pipeline, 
                     which allows Vercel to automatically deploy your website to your domain, when you push the code to a Github repository. Because of this 
                     pipeline, of lot of time was saved on figuring out how to deploy a site and how to get all the settings correctly. Vercel also had a very 
                     clean user experience, which allowed me to deploy this portfolio without many problems or help.</p>
+                    </div>):(null)}
+                    </div>
+                </div>
                 </div>
                 <Footer />
-                </div>
         </React.StrictMode>
     )
 }

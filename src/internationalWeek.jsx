@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar";
 import RG from "./documents/Reading Guide International Week.pdf";
 import PP from "./documents/Project Plan International Project.pdf";
@@ -13,10 +13,54 @@ import CD from "./documents/Concept document.pdf";
 import video from "./photos/Untitled.mp4";
 import groupPhoto from "./photos/groupPhoto.jpg";
 import AOS from 'aos';
+import Footer from "./components/footer";
+import { HashLink } from "react-router-hash-link";
 
 function InternationalWeek() {
 
     AOS.init();
+
+    const [open, setOpen] = useState(false);
+    const [userOpen, setUserOpen] = useState(false);
+    const [feasOpen, setFeasOpen] = useState(false);
+    const [commOpen, setCommOpen] = useState(false);
+    const [brainOpen, setBrainOpen] = useState(false);
+    const [ideationOpen, setIdeationOpen] = useState(false);
+    const [conceptOpen, setConceptOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(!open);
+    };
+
+    const handleUserOpen = () => {
+        setUserOpen(!userOpen);
+    };
+
+    const handleFeasOpen = () => {
+        setFeasOpen(!feasOpen);
+    };
+
+    const handleCommOpen = () => {
+        setCommOpen(!commOpen);
+    };
+
+    const handleBrainOpen = () => {
+        setBrainOpen(!brainOpen);
+    };
+
+    const handleIdeationOpen = () => {
+        setIdeationOpen(!ideationOpen);
+    };
+
+    const handleConceptOpen = () => {
+        setConceptOpen(!conceptOpen);
+    };
+
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -80; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
 
     return(
         <>
@@ -46,12 +90,15 @@ function InternationalWeek() {
                 <div class="explanation">
                 <div data-aos="fade-up">
                     <h1 class="researchTitle">Empathise and Define</h1>
-                    <h2 class="researchSubtitle" id="prepWeek">Preparation Week</h2>
-                    <em class="researchQuestion">What are new and innovative technologies you can use during the</em>
+                    <div data-aos="fade-up">
+                    {open ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleOpen}>Preparation Week ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleOpen}>Preparation Week ⮟</h2>)}
+                    {open && (
+                    <div data-aos="fade-up">
+                    <em class="researchQuestion">What are new and innovative technologies you can use during the International Week?</em>
                     <br />
-                    <div class="tag researchTag leftTag">Trend Analysis</div>
-                    <div class="tag researchTag">Design Specification</div>
-                    <p class="researchText"><b>Trend Analysis</b>
+                    <HashLink to="/internationalWeek/#trendAnalysis" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Trend Analysis</div></HashLink>
+                    <HashLink to="/internationalWeek/#poster" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Design Specification</div></HashLink>
+                    <p class="researchText"><b id="trendAnalysis">Trend Analysis</b>
                     <br /><br /><b>WHY? -</b> There are a lot of articles on the internet that talk about specific trends and how to use them in your project. 
                     These trends can simplify the design process in a lot of ways and knowing about these trends, you don't limit yourself to just your own knowledge when 
                     designing a solutions to an opportunity or problem.
@@ -62,7 +109,7 @@ function InternationalWeek() {
                     schematic designs, to create avatars (something we eventually did), but it can also be used as an autonomous learing tool. With AI, 
                     a lot of data can be used and with machine learning, an AI model can sometimes even predict the future. These things can all be used to keep 
                     in mind when developing a concept to not limit yourself when making a concept.
-                    <br /><br /><b>Design Specification</b>
+                    <br /><br /><b id="poster">Design Specification</b>
                     <br /><br /><b>WHY? -</b> We made a poster about our findings from the research, to easily see what was researched and to 
                     make the information as easily readable as we can. With a poster, our everything we researched was presentable, even to people 
                     with lesser knowlegde about ICT-Solutions.
@@ -72,30 +119,23 @@ function InternationalWeek() {
                     <br /><br /><b>Results -</b> The result is a poster with a short summary of the results of the research done in the preperation week. 
                     Of course, it is visually appealing and the text is kept to a minimum, since that is how a poster should be. The poster can be seen here: 
                     <br /><br />
-                    <img src={poster} alt="poster" style={{width: "60%"}}/>
-                    </p>
-                    </div>
-                    <br /><br />
-
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="Communication">Communication</h2>
-                    <p class="researchText">Communication went really well with my group mates. We could get everything done with each other and 
-                    everyone was on location every day. We even did some things after school together, just to learn more about cultures and each other. 
-                    With my advisor (Bernhard Sill), we had a good connection. We briefed him every day about progress and he also even joined the group photo. 
-                    In short, The communication in the group was seamless. Tasks were done when they were expected and our stakeholders were constantly briefed about 
-                    our progress. The entire group is even following each other on Instagram to keep in touch.</p>
-
-                    <img src={groupPhoto} alt="group photo" style={{width: "90%"}}/>
-
-                    <br /><br />
+                    <img src={poster} alt="poster" style={{width: "60%"}}/>
                     </div>
+                    </p>
+                    </div>)}
+                    </div>
+                    </div>
+                    <br /><br />
 
                 <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="TAR">User Research</h2>
+                    {userOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleUserOpen}>User Research ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleUserOpen}>User Research ⮟</h2>)}
                     <em class="researchQuestion">What are the preferred play activities and engagement patterns of children in the target age group within the context of Schoolplein14, and how can this knowledge inform the design of technological innovations to encourage outdoor play?</em>
                     <br />
-                    <div class="tag researchTag leftTag">Interviews</div>
-                    <p class="researchText"><b>Interviews</b>
+                    {userOpen && (
+                    <div data-aos="fade-up">
+                    <HashLink to="/internationalWeek/#targetAudienceInterview" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Interviews</div></HashLink>
+                    <p class="researchText"><b id="targetAudienceInterview">Interviews</b>
                     <br /><br /><b>WHY? -</b> By interviewing some children and their parents, I could get an understanding of what the kids 
                     wanted and what they currently have on the Schoolplein14. With this knowledge, an impression could be formed about what brainstormed 
                     ideas for a Schoolplein14 coating are good and fit the children that play there and which ones do not.
@@ -129,14 +169,18 @@ function InternationalWeek() {
                     <a href={CR} style={{display: "inline-block", marginLeft: "30px"}}>
                         <input type="button" value="Literature Research" class="viewBtn"/>
                     </a>
+                    </div>)}
                     </div>
+
                     <br /><br />
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="FeasResearch">Feasibility Ideas</h2>
-                    <em class="researchQuestion">"What is the potential value and feasibility of the brainstormed ideas in effectively encouraging outdoor play among children in the context of Schoolplein14?</em>
+                    {feasOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleFeasOpen}>Feasibility Ideas ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleFeasOpen}>Feasibility Ideas ⮟</h2>)}
+                    <em class="researchQuestion">"What is the potential value and feasibility of the brainstormed ideas in effectively encouraging outdoor play among children in the context of Schoolplein14?"</em>
                     <br />
-                    <div class="tag researchTag leftTag">Competitive Analysis</div>
-                    <p class="researchText"><b>Competitive Analysis</b>
+                    {feasOpen && (
+                    <div data-aos="fade-up">
+                    <HashLink to="/internationalWeek/#compAnalysis" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Competitive Analysis</div></HashLink>
+                    <p class="researchText"><b id="compAnalysis">Competitive Analysis</b>
                     <br /><br /><b>WHY? -</b> We needed to know what the pros and cons of our ideas were, to see which ideas would be the best overall. 
                     Another benefit of doing a competitive analysis is that you look a your solutions from multiple sides, the goods and the bads to inform the 
                     stakeholder about why they should use this solution and vice versa.
@@ -160,6 +204,25 @@ function InternationalWeek() {
                     <a href={FS} style={{display: "inline-block"}}>
                         <input type="button" value="Feasibility Solutions" class="viewBtn"/>
                     </a>
+                    </div>)}
+                    </div>
+
+                    <br /><br />
+
+                    <div data-aos="fade-up">
+                    {commOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleCommOpen}>Communication ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleCommOpen}>Communication ⮟</h2>)}
+                    {commOpen && (
+                    <div data-aos="fade-up">
+                    <h2 class="researchSubtitle" id="Communication"></h2>
+                    <p class="researchText">Communication went really well with my group mates. We could get everything done with each other and 
+                    everyone was on location every day. We even did some things after school together, just to learn more about cultures and each other. 
+                    With my advisor (Bernhard Sill), we had a good connection. We briefed him every day about progress and he also even joined the group photo. 
+                    In short, The communication in the group was seamless. Tasks were done when they were expected and our stakeholders were constantly briefed about 
+                    our progress. The entire group is even following each other on Instagram to keep in touch.</p>
+
+                    <img src={groupPhoto} alt="group photo" style={{width: "90%"}}/>
+
+                    </div>)}
                     </div>
 
                     <br /><br />
@@ -177,10 +240,12 @@ function InternationalWeek() {
 
                     <div data-aos="fade-up">
                     <h1 class="researchTitle">Prototype and Ideate</h1>
-                    <h2 class="researchSubtitle" id="brainstorming">Brainstorming</h2>
-                    <div class="tag researchTag leftTag">Card Sorting</div>
-                    <div class="tag researchTag">Sketching</div>
-                    <p class="researchText"><b>Card Sorting</b>
+                    {brainOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleBrainOpen}>Brainstorming ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleBrainOpen}>Brainstorming ⮟</h2>)}
+                    {brainOpen && (
+                    <div data-aos="fade-up">
+                    <HashLink to="/internationalWeek/#cardSorting" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Card Sorting</div></HashLink>
+                    <HashLink to="/internationalWeek/#sketching" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Sketching</div></HashLink>
+                    <p class="researchText"><b id="cardSorting">Card Sorting</b>
                     <br /><br /><b>WHY? -</b> By thinking up all kinds of ideas and eventually sorting them, every group member could put their ideas 
                     on paper. And when sorted, we could see what categories or ideas overlap with each other, to narrow down a specific direction or idea 
                     for the design process.
@@ -193,7 +258,7 @@ function InternationalWeek() {
                     ICT.
                     <br /><br /> 
                     <img src={CS} alt="cardSorting" style={{width: "60%"}}/>
-                    <br /><br /><b>Sketching</b>
+                    <br /><br /><b id="sketching">Sketching</b>
                     <br /><br /><b>WHY? -</b> We proceeded the brainstorming by drawing what we thought was going to be the new innovation for Schoolplein14 
                     for the Cruyff Foundation. By doing this, we could see what our groupmates were thinking and we had some visualization of what direction 
                     everyone wanted to go in. 
@@ -206,14 +271,18 @@ function InternationalWeek() {
                     which was a projector what could project spotlight with which you can play a game equivalent to musical chairs. But you could also play games like 
                     throw the ball in the blue spotlight or run to the yellow light zone etc. Everything, of course, with music. Unfortunately, these 
                     sketches were not photographed.
-                    <br /><br />
                     </p>
+                    </div>)}
                     </div>
 
+                    <br /><br />
+
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="ideating">Ideating on ideas</h2>
-                    <div class="tag researchTag leftTag">Ideation</div>
-                    <p class="researchText"><b>Ideation</b>
+                    {ideationOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleIdeationOpen}>Ideating on ideas ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleIdeationOpen}>Ideating on ideas ⮟</h2>)}
+                    {ideationOpen && (
+                    <div data-aos="fade-up">
+                    <HashLink to="/internationalWeek/#ideation" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Ideation</div></HashLink>
+                    <p class="researchText"><b id="ideation">Ideation</b>
                     <br /><br /><b>WHY? -</b> Ideating upon our ideas made the final concept way better. We could have just settled 
                     on what we already had, but there is always improvement to be found on places that you would overlook.  
                     <br /><br /><b>HOW? -</b> By referring to the experts (the teachers and supervisors), the demands of our stakeholder Axel and the 
@@ -223,15 +292,19 @@ function InternationalWeek() {
                     musical chairs type game), to the musical lights version with extra games to play. And finally, we came to the idea of creating a rock 
                     band type game, all because of the feedback we got along the way. The feedback was often to think big and to check the target audience and 
                     see what they want. That brought us to the eventual concept.</p>
-                    <br /><br /> 
+                    </div>)}
                     </div>
 
+                    <br /><br /> 
+
                     <div data-aos="fade-up">
-                    <h2 class="researchSubtitle" id="finalConcept">Final Concept</h2>
-                    <div class="tag researchTag leftTag">Concept</div>
-                    <div class="tag researchTag">Design Specification</div>
-                    <div class="tag researchTag">Pitch</div>
-                    <p class="researchText"><b>Concept</b>
+                    {conceptOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleConceptOpen}>Final Concept ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleConceptOpen}>Final Concept ⮟</h2>)}
+                    {conceptOpen && (
+                    <div data-aos="fade-up">
+                    <HashLink to="/internationalWeek/#concept" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Concept</div></HashLink>
+                    <HashLink to="/internationalWeek/#designSpec" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Design Specification</div></HashLink>
+                    <HashLink to="/internationalWeek/#pitch" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Pitch</div></HashLink>
+                    <p class="researchText"><b id="concept">Concept</b>
                     <br /><br /><b>WHY? -</b> Making a concept helps stakeholders understand what you are going to make. Your eventual 
                     product is going to be based upon this concept, so to make a schematic diplay. For the Cruyff Foundation, they will recieve 
                     a the plan of the 15th coating that we made, so they can perfect it as they see fit and tweak it where they want. With the concept, 
@@ -250,9 +323,8 @@ function InternationalWeek() {
                     <a href={CD} style={{display: "inline-block"}}>
                         <input type="button" value="Concept Document" class="viewBtn"/>
                     </a>
-                    </div>
                     <br /><br /> 
-                    <p class="researchText"><b>Design specification</b>
+                    <p class="researchText"><b id="designSpec">Design specification</b>
                     <br /><br /><b>WHY? -</b> Making a visual representation of the concept removes any kinds of miscommunication and 
                     misinterpretation of the concept. The video we made would also work as a sort of pitch and documentation of the design 
                     process.
@@ -264,9 +336,11 @@ function InternationalWeek() {
                     feasibility. The person who gave us feedback on the video did care about feasibility and budget. Of course way paid slight attention 
                     to these points, but we did not limit ourselves on these points. This resulted in the feedback being that we had a good and creative idea, 
                     but that feasibility and budget would be a major issue.</p>
+                    <div data-aos="fade-up">
                     <iframe src={video} frameborder="0" title="video" style={{width: "55vw", height: "60vh"}}></iframe>
+                    </div>
 
-                    <br /><br /><p class="researchText"><b>Pitch</b>
+                    <br /><br /><p class="researchText"><b id="pitch">Pitch</b>
                     <br /><br /><b>WHY? -</b> I also prepared a pitch for our concept to present in case we were chosen as winner of the category. 
                     I could give a broader explaination about what the concept was about, how it would be structured and how it would eventually look like 
                     in practice. This all to make the concept as clear as possible to the stakeholders.
@@ -281,8 +355,11 @@ function InternationalWeek() {
                     The pitch can still be found here: <Link to="https://www.canva.com/design/DAFiryajJlw/0e3mnH4NFBc0VrUC41d8JA/edit?utm_content=DAFiryajJlw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
                     Link to the Canva Pitch</Link></p>
                     <div class="researchImg pitch"></div>
+                    </div>)}
+                    </div>
                     </div>
                 </div>
+                <Footer />
         </>
     )
 }
