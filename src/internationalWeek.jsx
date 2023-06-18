@@ -91,10 +91,11 @@ function InternationalWeek() {
                 <div data-aos="fade-up">
                     <h1 class="researchTitle">Empathise and Define</h1>
                     <div data-aos="fade-up">
-                    {open ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleOpen}>Preparation Week ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleOpen}>Preparation Week ⮟</h2>)}
+                    {open ? (<h2 class="researchSubtitle" id="prepWeek" onClick={handleOpen}>Preparation Week ⮝</h2>) : (<h2 class="researchSubtitle" id="prepWeek" onClick={handleOpen}>Preparation Week ⮟</h2>)}
+                    <em class="researchQuestion">What are new and innovative technologies you can use during the International Week?</em>
                     {open && (
                     <div data-aos="fade-up">
-                    <em class="researchQuestion">What are new and innovative technologies you can use during the International Week?</em>
+                    
                     <br />
                     <HashLink to="/internationalWeek/#trendAnalysis" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Trend Analysis</div></HashLink>
                     <HashLink to="/internationalWeek/#poster" scroll={el => scrollWithOffset(el)}><div class="tag researchTag">Design Specification</div></HashLink>
@@ -129,7 +130,7 @@ function InternationalWeek() {
                     <br /><br />
 
                 <div data-aos="fade-up">
-                    {userOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleUserOpen}>User Research ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleUserOpen}>User Research ⮟</h2>)}
+                    {userOpen ? (<h2 class="researchSubtitle" id="interviews" onClick={handleUserOpen}>User Research ⮝</h2>) : (<h2 class="researchSubtitle" id="interviews" onClick={handleUserOpen}>User Research ⮟</h2>)}
                     <em class="researchQuestion">What are the preferred play activities and engagement patterns of children in the target age group within the context of Schoolplein14, and how can this knowledge inform the design of technological innovations to encourage outdoor play?</em>
                     <br />
                     {userOpen && (
@@ -174,7 +175,7 @@ function InternationalWeek() {
 
                     <br /><br />
                     <div data-aos="fade-up">
-                    {feasOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleFeasOpen}>Feasibility Ideas ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleFeasOpen}>Feasibility Ideas ⮟</h2>)}
+                    {feasOpen ? (<h2 class="researchSubtitle" id="feasibility" onClick={handleFeasOpen}>Feasibility Ideas ⮝</h2>) : (<h2 class="researchSubtitle" id="feasibility" onClick={handleFeasOpen}>Feasibility Ideas ⮟</h2>)}
                     <em class="researchQuestion">"What is the potential value and feasibility of the brainstormed ideas in effectively encouraging outdoor play among children in the context of Schoolplein14?"</em>
                     <br />
                     {feasOpen && (
@@ -210,7 +211,7 @@ function InternationalWeek() {
                     <br /><br />
 
                     <div data-aos="fade-up">
-                    {commOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleCommOpen}>Communication ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleCommOpen}>Communication ⮟</h2>)}
+                    {commOpen ? (<h2 class="researchSubtitle" id="communication" onClick={handleCommOpen}>Communication ⮝</h2>) : (<h2 class="researchSubtitle" id="communication" onClick={handleCommOpen}>Communication ⮟</h2>)}
                     {commOpen && (
                     <div data-aos="fade-up">
                     <h2 class="researchSubtitle" id="Communication"></h2>
@@ -240,7 +241,7 @@ function InternationalWeek() {
 
                     <div data-aos="fade-up">
                     <h1 class="researchTitle">Prototype and Ideate</h1>
-                    {brainOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleBrainOpen}>Brainstorming ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleBrainOpen}>Brainstorming ⮟</h2>)}
+                    {brainOpen ? (<h2 class="researchSubtitle" id="sketching" onClick={handleBrainOpen}>Brainstorming ⮝</h2>) : (<h2 class="researchSubtitle" id="sketching" onClick={handleBrainOpen}>Brainstorming ⮟</h2>)}
                     {brainOpen && (
                     <div data-aos="fade-up">
                     <HashLink to="/internationalWeek/#cardSorting" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Card Sorting</div></HashLink>
@@ -278,7 +279,7 @@ function InternationalWeek() {
                     <br /><br />
 
                     <div data-aos="fade-up">
-                    {ideationOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleIdeationOpen}>Ideating on ideas ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleIdeationOpen}>Ideating on ideas ⮟</h2>)}
+                    {ideationOpen ? (<h2 class="researchSubtitle" id="ideation" onClick={handleIdeationOpen}>Ideating on ideas ⮝</h2>) : (<h2 class="researchSubtitle" id="ideation" onClick={handleIdeationOpen}>Ideating on ideas ⮟</h2>)}
                     {ideationOpen && (
                     <div data-aos="fade-up">
                     <HashLink to="/internationalWeek/#ideation" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Ideation</div></HashLink>
@@ -298,7 +299,7 @@ function InternationalWeek() {
                     <br /><br /> 
 
                     <div data-aos="fade-up">
-                    {conceptOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleConceptOpen}>Final Concept ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleConceptOpen}>Final Concept ⮟</h2>)}
+                    {conceptOpen ? (<h2 class="researchSubtitle" id="video" onClick={handleConceptOpen}>Final Concept ⮝</h2>) : (<h2 class="researchSubtitle" id="video" onClick={handleConceptOpen}>Final Concept ⮟</h2>)}
                     {conceptOpen && (
                     <div data-aos="fade-up">
                     <HashLink to="/internationalWeek/#concept" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Concept</div></HashLink>

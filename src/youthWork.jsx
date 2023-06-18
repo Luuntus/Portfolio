@@ -107,7 +107,7 @@ function YouthWork() {
                 <div class="explanation">
                 <div data-aos="fade-up">
                 <h1 class="researchTitle">Research</h1>
-                    {open ? (<h2 class="researchSubtitle" id="IR" onClick={handleOpen}>International Research ⮝</h2>) : (<h2 class="researchSubtitle" id="IR" onClick={handleOpen}>International Research ⮟</h2>)}
+                    {open ? (<h2 class="researchSubtitle" id="germanResearch" onClick={handleOpen}>International Research ⮝</h2>) : (<h2 class="researchSubtitle" id="germanResearch" onClick={handleOpen}>International Research ⮟</h2>)}
                     <em class="researchQuestion">What does other international youth work currently do to reach out to the youth?</em>
                     <br />
                     {open ? (<div data-aos="fade-up">
@@ -167,7 +167,7 @@ function YouthWork() {
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    {eduOpen ? (<h2 class="researchSubtitle" id="ER" onClick={handleEduOpen}>Education of social media ⮝</h2>) : (<h2 class="researchSubtitle" id="ER" onClick={handleEduOpen}>Education of social media ⮟</h2>)}
+                    {eduOpen ? (<h2 class="researchSubtitle" id="eduResearch" onClick={handleEduOpen}>Education of social media ⮝</h2>) : (<h2 class="researchSubtitle" id="eduResearch" onClick={handleEduOpen}>Education of social media ⮟</h2>)}
                     <em class="researchQuestion">How can we educate social workers on the use of online media?</em>
                     <br />
                     {eduOpen ? ( <div data-aos="fade-up"><HashLink to="/youthWork/#EduStudy" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Literature Study</div></HashLink>
@@ -236,7 +236,7 @@ function YouthWork() {
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    {natOpen ? (<h2 class="researchSubtitle" id="NR" onClick={handleNatOpen}>Social media in the Netherlands ⮝</h2>) : (<h2 class="researchSubtitle" id="NR" onClick={handleNatOpen}>Social media in the Netherlands ⮟</h2>)}
+                    {natOpen ? (<h2 class="researchSubtitle" id="socialMedia" onClick={handleNatOpen}>Social media in the Netherlands ⮝</h2>) : (<h2 class="researchSubtitle" id="socialMedia" onClick={handleNatOpen}>Social media in the Netherlands ⮟</h2>)}
                     <em class="researchQuestion">What are the most used social platforms for youth internationally and in the Netherlands?</em>
                     <br />
                     {natOpen ? ( <div data-aos="fade-up"><HashLink to="/youthWork/#litStudySocialMedia" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Literature Study</div></HashLink>
@@ -338,7 +338,7 @@ function YouthWork() {
                     </div>
                 <div data-aos="fade-up">
                 <h1 class="researchTitle">Design</h1>
-                {sketchOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleSketchOpen}>Sketching ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleSketchOpen}>Sketching ⮟</h2>)}
+                {sketchOpen ? (<h2 class="researchSubtitle" id="sketching" onClick={handleSketchOpen}>Sketching ⮝</h2>) : (<h2 class="researchSubtitle" id="sketching" onClick={handleSketchOpen}>Sketching ⮟</h2>)}
                     {sketchOpen && (<div data-aos="fade-up">
                     <HashLink to="/youthWork/#sketching" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Sketching</div></HashLink>
                     <p class="researchText" id="sketching"><b>Sketching</b>
@@ -361,7 +361,7 @@ function YouthWork() {
                 </div>
                 <br /><br />
                 <div data-aos="fade-up">
-                    {c4Open ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleC4Open}>Software Design ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleC4Open}>Software Design ⮟</h2>)}
+                    {c4Open ? (<h2 class="researchSubtitle" id="c4" onClick={handleC4Open}>Software Design ⮝</h2>) : (<h2 class="researchSubtitle" id="c4" onClick={handleC4Open}>Software Design ⮟</h2>)}
                     <br />
                     {c4Open && (
                     <div data-aos="fade-up">
@@ -406,7 +406,7 @@ function YouthWork() {
 
                 <br /><br />
                 <div data-aos="fade-up">
-                    {prototypeOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handlePrototypeOpen}>Prototype ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handlePrototypeOpen}>Prototype ⮟</h2>)}
+                    {prototypeOpen ? (<h2 class="researchSubtitle" id="prototyping" onClick={handlePrototypeOpen}>Prototype ⮝</h2>) : (<h2 class="researchSubtitle" id="prototyping" onClick={handlePrototypeOpen}>Prototype ⮟</h2>)}
                     {prototypeOpen && (
                     <div data-aos="fade-up">
                     <HashLink to="/youthWork/#prototype" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Prototyping</div></HashLink>
@@ -431,7 +431,7 @@ function YouthWork() {
                 <br /><br />
 
                 <div data-aos="fade-up">
-                    {testOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleTestOpen}>Testing ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleTestOpen}>Testing ⮟</h2>)}
+                    {testOpen ? (<h2 class="researchSubtitle" id="testing" onClick={handleTestOpen}>Testing ⮝</h2>) : (<h2 class="researchSubtitle" id="testing" onClick={handleTestOpen}>Testing ⮟</h2>)}
                     {testOpen && (
                     <div data-aos="fade-up">
                     <HashLink to="/youthWork/#thinkAloudTest" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Thinking Aloud</div></HashLink>
@@ -478,7 +478,7 @@ function YouthWork() {
                 <br /><br />
 
                 <div data-aos="fade-up">
-                    {feedbackOpen ? (<h2 class="researchSubtitle" id="Interviews" onClick={handleFeedbackOpen}>Group Feedback ⮝</h2>) : (<h2 class="researchSubtitle" id="Interviews" onClick={handleFeedbackOpen}>Group Feedback ⮟</h2>)}
+                    {feedbackOpen ? (<h2 class="researchSubtitle" id="feedback" onClick={handleFeedbackOpen}>Group Feedback ⮝</h2>) : (<h2 class="researchSubtitle" id="feedback" onClick={handleFeedbackOpen}>Group Feedback ⮟</h2>)}
                     {feedbackOpen && (
                     <div data-aos="fade-up">
                     <p class="researchText"><b>360 degrees feedback</b>

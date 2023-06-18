@@ -93,7 +93,7 @@ function Portfolio() {
                 </div>
                 <div class="explanation">
                 <div data-aos="fade-up">
-                    <h1 class="researchTitle">Empathise & Define</h1>
+                    <h1 class="researchTitle" id="research">Empathise & Define</h1>
                     {open ? (<h2 class="researchSubtitle" id="TAR" onClick={handleOpen}>User Research ⮝</h2>) : (<h2 class="researchSubtitle" id="TAR" onClick={handleOpen}>User Research ⮟</h2>)}
                     <em class="researchQuestion">How can I use my portfolio to impress small companies for the function of frontend developer?</em>
                     <br />
@@ -219,7 +219,7 @@ function Portfolio() {
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    {frameworkOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleFrameworkOpen}>Animations and Frameworks ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleFrameworkOpen}>Animations and Frameworks ⮟</h2>)}
+                    {frameworkOpen ? (<h2 class="researchSubtitle" id="AR" onClick={handleFrameworkOpen}>Animations and Frameworks ⮝</h2>) : (<h2 class="researchSubtitle" id="AR" onClick={handleFrameworkOpen}>Animations and Frameworks ⮟</h2>)}
                     <em class="researchQuestion">How do I use animations in CSS/JavaScript?/What frameworks will help me with animations and responsiveness?</em>
                     <br />
                     {frameworkOpen ? (<div data-aos="fade-up">
@@ -303,7 +303,7 @@ function Portfolio() {
                     </div>
                     <br /><br />
                     <div data-aos="fade-up">
-                    {designOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleDesignOpen}>Design ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleDesignOpen}>Design ⮟</h2>)}
+                    {designOpen ? (<h2 class="researchSubtitle" id="design" onClick={handleDesignOpen}>Design ⮝</h2>) : (<h2 class="researchSubtitle" id="design" onClick={handleDesignOpen}>Design ⮟</h2>)}
                     {designOpen ? (<div data-aos="fade-up">
                     <br />
                     <HashLink to="/portfolio/#desPeerRev" scroll={el => scrollWithOffset(el)}><div class="tag researchTag leftTag">Peer Review</div></HashLink>
@@ -366,7 +366,7 @@ function Portfolio() {
                     <br /><br />
                     <h1 class="researchTitle">Programming</h1>
                     <div data-aos="fade-up">
-                    {programmingOpen ? (<h2 class="researchSubtitle" id="DT" onClick={handleProgrammingOpen}>Programming with React and Tabnine ⮝</h2>) : (<h2 class="researchSubtitle" id="DT" onClick={handleProgrammingOpen}>Programming with React and Tabnine ⮟</h2>)}
+                    {programmingOpen ? (<h2 class="researchSubtitle" id="programming" onClick={handleProgrammingOpen}>Programming with React and Tabnine ⮝</h2>) : (<h2 class="researchSubtitle" id="programming" onClick={handleProgrammingOpen}>Programming with React and Tabnine ⮟</h2>)}
                     {programmingOpen ? (<div data-aos="fade-up">
                     <p class="researchText">AI tools and frameworks were also used for programming. The AI tool Tabnine see what you are 
                     typing as code and tries to finish the line of code. This works very nice, since this AI tool often writes the right code and 

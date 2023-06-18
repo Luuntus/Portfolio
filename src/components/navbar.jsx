@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { HashLink as Link} from "react-router-hash-link";
 
 function Navbar() {
@@ -40,6 +40,17 @@ function Navbar() {
             <li class="bigNumber">04.</li>
                 <li class="navList">&lt;Contact&gt;</li>
             </Link>
+            <div className="dropdown" style={{display:"inline"}}>
+                <li class="bigNumber">05.</li>
+                <li class="navList">&lt;Reading Guides ⮟&gt;</li>
+                    <div className="dropdownMenu">
+                        <Link to="/reading-guide-personal-project#top">Personal Project</Link>
+                        <br />
+                        <Link to="/reading-guide-group-project#top">Group Project</Link>
+                        <br />
+                        <Link to="/reading-guide-international-project#top">International Project</Link>
+                    </div>
+            </div>
         </ul>
     </div>
     )
